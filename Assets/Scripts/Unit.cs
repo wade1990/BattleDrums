@@ -1,9 +1,8 @@
-﻿namespace Assets.Scripts
+﻿internal enum Unit
 {
-    internal enum Unit
-    {
-        Archer,
-        Spearman,
-        Cavelry
-    }
+    None,
+    Archers,
+    Horsemen,
+    Spearman
 }
+
