@@ -10,9 +10,7 @@ public class GameController : MonoBehaviour
 
     [SerializeField] private Player _leftPlayer;
     [SerializeField] private Player _rightPlayer;
-
-    private bool _finished;
-
+    
     private int _activeLineIndex;
 
     /// <summary>
