@@ -1,6 +1,8 @@
-﻿internal enum Unit
+﻿public enum Unit
 {
-    Archer,
-    Spearman,
-    Cavelry
+    None,
+    Archers,
+    Horsemen,
+    Spearman
 }
+

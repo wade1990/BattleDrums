@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Assets.Scripts;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
@@ -110,7 +109,7 @@ public class GameController : MonoBehaviour
         if (leftUnit == rightUnit)
             return 0;
 
-        return leftUnit == Unit.Cavelry && rightUnit == Unit.Archer || leftUnit < rightUnit 
+        return leftUnit == Unit.Horsemen && rightUnit == Unit.Archers || leftUnit < rightUnit 
             ? 1 
             : -1;
     }
