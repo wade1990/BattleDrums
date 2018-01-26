@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameController : MonoBehaviour
 {
+    [SerializeField] private float _beatsPerMinute;
+
     [SerializeField] private List<Transform> _linePoints;
 
-    [SerializeField] private PlayerPrefs _player1;
-    [SerializeField] private PlayerPrefs _player2;
+    [SerializeField] private Player _player1;
+    [SerializeField] private Player _player2;
 
     private bool _finished;
 
