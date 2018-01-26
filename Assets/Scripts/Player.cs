@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(IRythmInput))] internal class Player
 public class Player : MonoBehaviour
 {
     [SerializeField] private GameObject _archers;
@@ -51,5 +50,5 @@ public class Player : MonoBehaviour
     public void StopReadingInput()
     {
 
+    }
 }
-
