@@ -1,4 +1,4 @@
-﻿internal enum Unit
+﻿public enum Unit
 {
     None,
     Archers,

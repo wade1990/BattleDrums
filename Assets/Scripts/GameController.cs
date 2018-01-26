@@ -8,13 +8,41 @@ public class GameController : MonoBehaviour
 
     [SerializeField] private List<Transform> _linePoints;
 
-    [SerializeField] private Player _player1;
-    [SerializeField] private Player _player2;
+    [SerializeField] private Player _leftPlayer;
+    [SerializeField] private Player _rightPlayer;
 
     private bool _finished;
 
+    private int _activeLineIndex;
+
+    /// <summary>
+    /// The time it takes for a single meter of 4 beats to play.
+    /// </summary>
+    private float MeterTime
+    {
+        get { return 4 * BeatTime; }
+    }
+
+    /// <summary>
+    /// Duration of a single beat.
+    /// </summary>
+    private float BeatTime
+    {
+        get { return 60f / _beatsPerMinute; }
+    }
+
+    /// <summary>
+    /// Wether the game is finished or not.
+    /// </summary>
+    private bool Finished
+    {
+        get { return _activeLineIndex == 0 || _activeLineIndex == _linePoints.Count - 1; }
+    }
+    
     private void Awake()
     {
+        _activeLineIndex = _linePoints.Count / 2;
+
         StartCoroutine(Loop());
     }
 
@@ -22,27 +50,69 @@ public class GameController : MonoBehaviour
     {
         yield return InitialCountDown();
 
-        while (!_finished)
+        while (!Finished)
         {
             yield return InputPhase();
             yield return ResolveActions();
         }
     }
 
-
-    private object InitialCountDown()
+    private IEnumerator InitialCountDown()
     {
-        throw new System.NotImplementedException();
+        //Todo show a countdown.
+        yield return new WaitForSeconds(MeterTime);
     }
 
-
-    private object InputPhase()
+    /// <summary>
+    /// The phase that the players are inputting their rythm.
+    /// </summary>
+    private IEnumerator InputPhase()
     {
-        throw new System.NotImplementedException();
+        _leftPlayer.StartReadingInput();
+        _rightPlayer.StartReadingInput();
+
+        yield return new WaitForSeconds(MeterTime);
+
+        _leftPlayer.StopReadingInput();
+        _rightPlayer.StopReadingInput();
     }
 
-    private object ResolveActions()
+    /// <summary>
+    /// The fase that the selected actions are resolved.
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator ResolveActions()
     {
-        throw new System.NotImplementedException();
+        //Get the selected units.
+        Unit leftUnit = _leftPlayer.SelectedUnit;
+        Unit rigtUnit = _rightPlayer.SelectedUnit;
+
+        //Get the battle range and resole combat.
+        Transform battleStartPoint = _linePoints[_activeLineIndex];
+        _activeLineIndex += ResolveCombat(leftUnit, rigtUnit);
+        Transform battleEndPoint = _linePoints[_activeLineIndex];
+
+        //Perform the combat.
+        _leftPlayer.DoCombat(battleStartPoint, battleEndPoint, MeterTime);
+        _rightPlayer.DoCombat(battleStartPoint, battleEndPoint, MeterTime);
+
+        //Wait.
+        yield return new WaitForSeconds(MeterTime);
+    }
+
+    /// <summary>
+    /// Resolves the combat.
+    /// </summary>
+    /// <param name="leftUnit">The unit chosen by <see cref="_leftPlayer"/>.</param>
+    /// <param name="rightUnit">The unit chosen by <see cref="_rightPlayer"/>.</param>
+    /// <returns>The change of the <see cref="_activeLineIndex"/> following this combat.</returns>
+    private static int ResolveCombat(Unit leftUnit, Unit rightUnit)
+    {
+        if (leftUnit == rightUnit)
+            return 0;
+
+        return leftUnit == Unit.Cavelry && rightUnit == Unit.Archer || leftUnit < rightUnit 
+            ? 1 
+            : -1;
     }
 }

@@ -1,6 +1,4 @@
-﻿using System;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Player : MonoBehaviour
 {
@@ -13,6 +11,8 @@ public class Player : MonoBehaviour
     [SerializeField] private Unit _chosenUnit;
 
     [SerializeField] private float speed;
+
+    public Unit SelectedUnit { get; private set; }
 
     private void Update()
     {
@@ -37,6 +37,11 @@ public class Player : MonoBehaviour
         unit.transform.position = Vector3.MoveTowards(unit.transform.position, _middle.transform.position, speed);
     }
 
+    public void DoCombat(Transform battleStartpoint, Transform battleEndPoint, float duration)
+    {
+
+    }
+
     public void StartReadingInput()
     {
 
@@ -46,7 +51,5 @@ public class Player : MonoBehaviour
     {
 
     }
-
-
 }
 
