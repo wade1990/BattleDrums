@@ -14,7 +14,7 @@ public class Rhythm : IRhythmInput
 
     public Beat[] Pattern;
 
-    private int _currentBeat;
+    private int _currentBeat = -1;
     private bool _broken;
 
     public Rhythm(UnitType unit, ActionType action, Beat[] pattern, Beat filter = Beat.All)
