@@ -1,26 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-public enum BeatType
+[Flags]
+public enum Beat : int
 {
-    High,
-    Mid,
-    Low
+    None = 0,
+    High = 1,
+    Mid = 2,
+    Low = 4,
+    All = int.MaxValue
 };
-
-public struct Beat
-{
-    public int Time;
-    BeatType Type;
-        
-    public Beat(int time, BeatType type)
-    {
-            
-        Time = time;
-        Type = type;
-    }
-
-        
-}
