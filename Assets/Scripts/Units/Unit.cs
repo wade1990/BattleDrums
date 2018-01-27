@@ -21,7 +21,8 @@ public class Unit : MonoBehaviour
 
     private void Update()
     {
-        gameObject.transform.position += _moveDirection * Speed;
+        if (_isMoving)
+            gameObject.transform.position += _moveDirection * Speed;
     }
 
     public virtual void MoveForward()
@@ -35,12 +36,12 @@ public class Unit : MonoBehaviour
         _moveDirection = -ForwardDirection;
         StartMoving();
     }
-    
+
     protected void StartMoving()
     {
         _isMoving = true;
     }
-    
+
     public virtual void StopMoving()
     {
         _isMoving = false;

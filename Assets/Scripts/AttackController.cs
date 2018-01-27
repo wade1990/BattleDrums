@@ -6,7 +6,7 @@ public class AttackController : MonoBehaviour
 {
     [SerializeField] private float _damage;
 
-    private Dictionary<Collider2D, Unit> _enemiesInRange;
+    private readonly Dictionary<Collider2D, Unit> _enemiesInRange = new Dictionary<Collider2D, Unit>();
 
     public event Action<Unit> TriggerEntered; 
 

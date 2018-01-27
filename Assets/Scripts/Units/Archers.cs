@@ -33,7 +33,11 @@ public class Archers : Unit
 
     private void StopAttacking()
     {
+        if (attackingRoutine == null)
+            return;
+
         StopCoroutine(attackingRoutine);
+        attackingRoutine = null;
     }
 
     private IEnumerator AttackRoutine()
