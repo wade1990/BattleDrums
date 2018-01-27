@@ -108,6 +108,26 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &327742814 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1731941181242646, guid: 55078965bee3a974895511305e786986,
+    type: 2}
+  m_PrefabInternal: {fileID: 434341793}
+--- !u!114 &327742818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 327742814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d3599b25b1560c47beb978431571a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passed: {r: 0, g: 0, b: 0, a: 0.5}
+  toDo: {r: 0, g: 1, b: 0, a: 1}
+  failed: {r: 1, g: 0.1, b: 0.1, a: 0.9}
+  _player: {fileID: 750624345}
 --- !u!1001 &434341793
 Prefab:
   m_ObjectHideFlags: 0
@@ -205,9 +225,19 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 224567709668577628, guid: 55078965bee3a974895511305e786986,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55078965bee3a974895511305e786986, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &439362772 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1186352892875438, guid: c73a665d2db276d4682508cc6526423a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1561949596}
 --- !u!1 &590409475
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,6 +340,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _baseBPM: 60
+--- !u!1 &750624345 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1812749556466786, guid: 117a163902187b54e803a3ed5745c0db,
+    type: 2}
+  m_PrefabInternal: {fileID: 938787139}
 --- !u!1001 &938787139
 Prefab:
   m_ObjectHideFlags: 0
@@ -466,12 +501,22 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  QuarterTimeBeat:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   Nextbeat:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   NextHalfbeat:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  NextMeasure:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -489,6 +534,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1323683763 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1826021107771416, guid: 55078965bee3a974895511305e786986,
+    type: 2}
+  m_PrefabInternal: {fileID: 434341793}
+--- !u!114 &1323683767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1323683763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d3599b25b1560c47beb978431571a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passed: {r: 0, g: 0, b: 0, a: 0.5}
+  toDo: {r: 0, g: 1, b: 0, a: 1}
+  failed: {r: 1, g: 0.1, b: 0.1, a: 0.9}
+  _player: {fileID: 439362772}
 --- !u!1001 &1345190564
 Prefab:
   m_ObjectHideFlags: 0

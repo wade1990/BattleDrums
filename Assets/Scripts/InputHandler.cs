@@ -23,9 +23,8 @@ public class InputHandler : MonoBehaviour, IRhythmInput
 {
     [SerializeField]
     bool _toneToUnit;
-
-    [SerializeField]
-    Rhythm[] PatternList = { };
+    
+    public Rhythm[] PatternList;
 
     public KeyToBeat[] ControlScheme = { new KeyToBeat(KeyCode.Z, Beat.High), new KeyToBeat(KeyCode.X, Beat.Mid), new KeyToBeat(KeyCode.C, Beat.Low) };
 
@@ -36,7 +35,7 @@ public class InputHandler : MonoBehaviour, IRhythmInput
     // Use this for initialization
     void Start()
     {
-        BeatManager.Instance.HalfTimeBeat.AddListener(RunBeat);
+        BeatManager.Instance.QuarterTimeBeat.AddListener(RunBeat);
 
 
         // If we pick one unit per tone
