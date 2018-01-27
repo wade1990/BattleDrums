@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ArrowSpawner : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class ArrowSpawner : MonoBehaviour
 
     [SerializeField] private float _spawnInterval;
     [SerializeField] private int _spawnCount;
+
+    [SerializeField] private UnityEvent _arrowsSpawned;
 
     private List<Transform> _children;
 
@@ -40,5 +43,7 @@ public class ArrowSpawner : MonoBehaviour
 
             arrow.StartMoving(targetPosition);
         }
+
+        _arrowsSpawned.Invoke();
     }
 }

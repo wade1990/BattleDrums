@@ -35,6 +35,10 @@ namespace Assets.Scripts
         public UnityEvent Nextbeat;
         public UnityEvent NextHalfbeat;
 
+        public UnityEvent NextMeasure;
+
+
+
         private void Awake()
         {
             Instance = this;
@@ -58,14 +62,34 @@ namespace Assets.Scripts
         {
             while (true)
             {
-                Beat.Invoke();
-                InvokeAndClear(Nextbeat);
-                yield return new WaitForSeconds(BeatTime / 2);
-
-                HalfTimeBeat.Invoke();
-                InvokeAndClear(NextHalfbeat);
-                yield return new WaitForSeconds(BeatTime / 2);
+                PlayBeat();
+                yield return new WaitForSeconds(BeatTime / 4);
+                PlayQuarterBeat();
+                yield return new WaitForSeconds(BeatTime / 4);
+                PlayHalfBeat();
+                yield return new WaitForSeconds(BeatTime / 4);
+                PlayQuarterBeat();
+                yield return new WaitForSeconds(BeatTime / 4);
             }
+        }
+
+        private void PlayBeat()
+        {
+            Beat.Invoke();
+            InvokeAndClear(NextMeasure);
+            InvokeAndClear(Nextbeat);
+        }
+
+        private void PlayHalfBeat()
+        {
+            HalfTimeBeat.Invoke();
+            InvokeAndClear(NextMeasure);
+            InvokeAndClear(NextHalfbeat);
+        }
+
+        private void PlayQuarterBeat()
+        {
+            InvokeAndClear(NextMeasure);
         }
 
         private static void InvokeAndClear(UnityEvent unityEvent)
