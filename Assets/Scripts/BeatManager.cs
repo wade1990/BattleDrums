@@ -25,6 +25,7 @@ namespace Assets.Scripts
         /// Event thrown every beat.
         /// </summary>
         public UnityEvent Beat;
+        public UnityEvent HalfTimeBeat;
 
         private void Awake()
         {
@@ -41,7 +42,9 @@ namespace Assets.Scripts
             while (true)
             {
                 Beat.Invoke();
-                yield return new WaitForSeconds(BeatTime);
+                yield return new WaitForSeconds(BeatTime / 2);
+                HalfTimeBeat.Invoke();
+                yield return new WaitForSeconds(BeatTime / 2);
             }
         }
     }
