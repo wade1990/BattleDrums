@@ -1,15 +1,26 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(ArrowSpawner))]
 public class Archers : Unit
 {
     [SerializeField] private float _beatsPerDamage;
 
+    private ArrowSpawner _arrowSpawner;
+
     private IEnumerator attackingRoutine;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        _arrowSpawner = GetComponent<ArrowSpawner>();
+    }
 
     public override void Attack()
     {
         attackingRoutine = AttackRoutine();
+        _arrowSpawner.StartShooting();
+
         StartCoroutine(attackingRoutine);
     }
 
@@ -25,17 +36,12 @@ public class Archers : Unit
         base.MoveForward();
     }
 
-    public override void StopMoving()
-    {
-        StopAttacking();
-        base.StopMoving();
-    }
-
     private void StopAttacking()
     {
         if (attackingRoutine == null)
             return;
 
+        _arrowSpawner.StopShooting();
         StopCoroutine(attackingRoutine);
         attackingRoutine = null;
     }
