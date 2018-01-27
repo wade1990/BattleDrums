@@ -31,7 +31,7 @@ public class InputHandler : MonoBehaviour, IRhythmInput {
     // Use this for initialization
     void Start ()
     {
-        BeatManager.Instance.Beat.AddListener(RunBeat);
+        BeatManager.Instance.HalfTimeBeat.AddListener(RunBeat);
         foreach (Rhythm rhythm in PatternList)
             rhythm.ValidInputMade += InputComplete;
 	}
