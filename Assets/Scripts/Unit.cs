@@ -4,6 +4,7 @@
 internal class Unit : MonoBehaviour
 {
     public Vector2 ForwardDirection;
+    public float Speed;
 
     private HealthController _healthController;
     private Vector3 _moveDirection;
@@ -15,7 +16,7 @@ internal class Unit : MonoBehaviour
 
     private void Update()
     {
-        gameObject.transform.position += _moveDirection;
+        gameObject.transform.position += _moveDirection * Speed;
     }
 
     public void MoveForward()
