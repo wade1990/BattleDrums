@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(HealthController))]
 public class Unit : MonoBehaviour
 {
+    [SerializeField] private UnityEvent StartedMoving;
+
     public Vector2 ForwardDirection;
     public float Speed;
 
@@ -39,6 +42,7 @@ public class Unit : MonoBehaviour
 
     protected void StartMoving()
     {
+        StartedMoving.Invoke();
         _isMoving = true;
     }
 

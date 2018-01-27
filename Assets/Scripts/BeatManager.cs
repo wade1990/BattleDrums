@@ -23,6 +23,9 @@ namespace Assets.Scripts
         /// </summary>
         public float BeatTime { get { return 60f / _beatsPerMinute; } }
 
+
+        public float BPM { get { return _beatsPerMinute; } }
+
         /// <summary>
         /// Event thrown every beat.
         /// </summary>

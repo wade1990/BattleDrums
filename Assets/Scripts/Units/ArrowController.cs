@@ -5,7 +5,9 @@ using UnityEngine.Events;
 internal class ArrowController : MonoBehaviour
 {
     [SerializeField] private float _speed;
+
     [SerializeField] private UnityEvent _targetReached;
+
     [SerializeField] private float _timeBeforeFading;
     [SerializeField] private float _fadingDuration;
 
