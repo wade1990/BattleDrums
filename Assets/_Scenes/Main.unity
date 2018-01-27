@@ -515,21 +515,6 @@ Prefab:
       propertyPath: m_Name
       value: Units1
       objectReference: {fileID: 0}
-    - target: {fileID: 114437674635082434, guid: 117a163902187b54e803a3ed5745c0db,
-        type: 2}
-      propertyPath: _holdingDamage
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114437674635082434, guid: 117a163902187b54e803a3ed5745c0db,
-        type: 2}
-      propertyPath: _movementDelay
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114437674635082434, guid: 117a163902187b54e803a3ed5745c0db,
-        type: 2}
-      propertyPath: _defense
-      value: 100
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 117a163902187b54e803a3ed5745c0db, type: 2}
   m_IsPrefabParent: 0

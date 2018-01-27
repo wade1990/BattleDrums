@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 114345269830803074}
   - component: {fileID: 50445275007191650}
   - component: {fileID: 61973465967894740}
+  - component: {fileID: 114486872376713136}
   m_Layer: 8
   m_Name: ArchersUnit1
   m_TagString: Untagged
@@ -124,6 +125,7 @@ GameObject:
   - component: {fileID: 114292347115678066}
   - component: {fileID: 50474923602881400}
   - component: {fileID: 61959497449036164}
+  - component: {fileID: 114536845478404588}
   m_Layer: 8
   m_Name: SpearmenUnit1
   m_TagString: Untagged
@@ -273,6 +275,7 @@ GameObject:
   - component: {fileID: 114649612750205472}
   - component: {fileID: 50914214306383940}
   - component: {fileID: 61340450496497718}
+  - component: {fileID: 114049299418477008}
   m_Layer: 8
   m_Name: HorsemenUnit1
   m_TagString: Untagged
@@ -757,6 +760,17 @@ MonoBehaviour:
   ForwardDirection: {x: 1, y: 0}
   Speed: 0.015
   _beatsPerDamage: 0
+--- !u!114 &114049299418477008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1843806745973610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114091736478245848
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -796,7 +810,18 @@ MonoBehaviour:
   alive: 1
   _died:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114536845478404588}
+        m_MethodName: DestroySelf
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!114 &114345269830803074
@@ -814,7 +839,18 @@ MonoBehaviour:
   alive: 1
   _died:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114486872376713136}
+        m_MethodName: DestroySelf
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!114 &114383672004965396
@@ -847,6 +883,17 @@ MonoBehaviour:
   _defense: 100
   _holdingDamage: 100
   _movementDelay: 0
+--- !u!114 &114486872376713136
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1122012807229970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114519613521561496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -861,6 +908,17 @@ MonoBehaviour:
   _unit: 3
   _action: 0
   _mouseButton: 0
+--- !u!114 &114536845478404588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1267678297523208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114571616424219408
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -901,7 +959,18 @@ MonoBehaviour:
   alive: 1
   _died:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114049299418477008}
+        m_MethodName: DestroySelf
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!212 &212066973660333078
