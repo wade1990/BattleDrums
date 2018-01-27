@@ -117,6 +117,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9172394}
   - component: {fileID: 9172395}
+  - component: {fileID: 9172396}
+  - component: {fileID: 9172397}
   m_Layer: 0
   m_Name: Archers2
   m_TagString: Untagged
@@ -179,6 +181,35 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &9172396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 9172393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6691b34d27755e4ea785b897ee22da3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9172397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 9172393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10bda5e40177460d862ed2bc5dcfd05a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 0
+  alive: 0
+  _died:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &494252742
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,6 +583,8 @@ GameObject:
   m_Component:
   - component: {fileID: 815608432}
   - component: {fileID: 815608433}
+  - component: {fileID: 815608434}
+  - component: {fileID: 815608435}
   m_Layer: 0
   m_Name: Spearmen2
   m_TagString: Untagged
@@ -614,6 +647,35 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &815608434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 815608431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6691b34d27755e4ea785b897ee22da3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &815608435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 815608431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10bda5e40177460d862ed2bc5dcfd05a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 0
+  alive: 0
+  _died:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &953001181
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,6 +685,8 @@ GameObject:
   m_Component:
   - component: {fileID: 953001182}
   - component: {fileID: 953001183}
+  - component: {fileID: 953001184}
+  - component: {fileID: 953001185}
   m_Layer: 0
   m_Name: Spearmen1
   m_TagString: Untagged
@@ -685,6 +749,35 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &953001184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 953001181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6691b34d27755e4ea785b897ee22da3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &953001185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 953001181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10bda5e40177460d862ed2bc5dcfd05a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 0
+  alive: 0
+  _died:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1018090089
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,12 +1038,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6812581c6f3614c92cac0c5431651a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _archers: {fileID: 1389002581}
-  _horsemen: {fileID: 1731470127}
-  _spearmen: {fileID: 953001181}
-  _middle: {fileID: 0}
-  _chosenUnit: 0
-  speed: 0.1
+  _archers: {fileID: 1389002584}
+  _horsemen: {fileID: 1731470130}
+  _spearmen: {fileID: 953001184}
 --- !u!1 &1385890642
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,6 +1145,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1389002582}
   - component: {fileID: 1389002583}
+  - component: {fileID: 1389002584}
+  - component: {fileID: 1389002585}
   m_Layer: 0
   m_Name: Archers1
   m_TagString: Untagged
@@ -1117,6 +1209,35 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1389002584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1389002581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6691b34d27755e4ea785b897ee22da3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1389002585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1389002581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10bda5e40177460d862ed2bc5dcfd05a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 0
+  alive: 0
+  _died:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1392743532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,6 +1525,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1731470128}
   - component: {fileID: 1731470129}
+  - component: {fileID: 1731470130}
+  - component: {fileID: 1731470131}
   m_Layer: 0
   m_Name: Horsemen1
   m_TagString: Untagged
@@ -1466,6 +1589,35 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1731470130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1731470127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6691b34d27755e4ea785b897ee22da3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1731470131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1731470127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10bda5e40177460d862ed2bc5dcfd05a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 0
+  alive: 0
+  _died:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1809862071
 GameObject:
   m_ObjectHideFlags: 0
@@ -1546,6 +1698,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1828949669}
   - component: {fileID: 1828949670}
+  - component: {fileID: 1828949671}
+  - component: {fileID: 1828949672}
   m_Layer: 0
   m_Name: Horsemen2
   m_TagString: Untagged
@@ -1608,6 +1762,35 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1828949671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1828949668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6691b34d27755e4ea785b897ee22da3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1828949672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1828949668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10bda5e40177460d862ed2bc5dcfd05a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 0
+  alive: 0
+  _died:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1864103858
 GameObject:
   m_ObjectHideFlags: 0
@@ -1652,12 +1835,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6812581c6f3614c92cac0c5431651a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _archers: {fileID: 9172393}
-  _horsemen: {fileID: 1828949668}
-  _spearmen: {fileID: 815608431}
-  _middle: {fileID: 0}
-  _chosenUnit: 0
-  speed: 0.1
+  _archers: {fileID: 9172396}
+  _horsemen: {fileID: 1828949671}
+  _spearmen: {fileID: 815608434}
 --- !u!1 &1966923325
 GameObject:
   m_ObjectHideFlags: 0

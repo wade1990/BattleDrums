@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(HealthController))]
-internal abstract class Unit : MonoBehaviour
+internal class Unit : MonoBehaviour
 {
     private HealthController _healthController;
 
@@ -26,7 +26,9 @@ internal abstract class Unit : MonoBehaviour
         throw new NotImplementedException();
     }
 
-    public abstract void PerformAction();
+    public virtual void PerformAction()
+    {
+    }
 
     public void ApplyDamage(float damage)
     {
