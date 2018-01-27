@@ -14,7 +14,7 @@ namespace Assets.Scripts
         /// <summary>
         /// Static instance <see cref="BeatManager"/>.
         /// </summary>
-        public BeatManager Instance { get; private set; }
+        public static BeatManager Instance { get; private set; }
 
         /// <summary>
         /// Time between beats.
