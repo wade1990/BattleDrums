@@ -309,6 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb70606a5d40a584e82b59be7bedbdef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _baseBPM: 60
 --- !u!1001 &938787139
 Prefab:
   m_ObjectHideFlags: 0
@@ -505,8 +506,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e775d3f9f8279945a93287f7ee330be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _beatsPerMinute: 60
-  _startupDelay: 0
+  _beatsPerMinute: 90
+  _startupDelay: 0.3
   Beat:
     m_PersistentCalls:
       m_Calls: []
