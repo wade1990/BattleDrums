@@ -108,6 +108,11 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &132555110 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1186352892875438, guid: c73a665d2db276d4682508cc6526423a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1561949596}
 --- !u!1001 &434341793
 Prefab:
   m_ObjectHideFlags: 0
@@ -204,6 +209,44 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114271021432848262, guid: 55078965bee3a974895511305e786986,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 1c39228d0573ad947b175aa0deca8a26,
+        type: 3}
+    - target: {fileID: 114271021432848262, guid: 55078965bee3a974895511305e786986,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 114271021432848262, guid: 55078965bee3a974895511305e786986,
+        type: 2}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114271021432848262, guid: 55078965bee3a974895511305e786986,
+        type: 2}
+      propertyPath: m_Text
+      value: "Attack:\nR . R L | . L . L\nStay:\nR . . . | L . . R\nMove Forward:
+        \nR . . . | . . R L\nMove Backward:\n. . R . | L . . . "
+      objectReference: {fileID: 0}
+    - target: {fileID: 114732899120568468, guid: 55078965bee3a974895511305e786986,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 1c39228d0573ad947b175aa0deca8a26,
+        type: 3}
+    - target: {fileID: 114732899120568468, guid: 55078965bee3a974895511305e786986,
+        type: 2}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114732899120568468, guid: 55078965bee3a974895511305e786986,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 34
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55078965bee3a974895511305e786986, type: 2}
@@ -309,6 +352,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb70606a5d40a584e82b59be7bedbdef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &927793888 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1812749556466786, guid: 117a163902187b54e803a3ed5745c0db,
+    type: 2}
+  m_PrefabInternal: {fileID: 938787139}
+--- !u!114 &927793892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 927793888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269d1b66671e2eb4b87f78351020a3b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _toneToUnit: 1
+  PatternList:
+  - Unit: 7
+    Action: 0
+    Filter: 2147483647
+    Pattern: ffffff7f00000000ffffff7f00000000
+  - Unit: 7
+    Action: 1
+    Filter: 2147483647
+    Pattern: ffffff7fffffff7f0000000000000000
+  - Unit: 7
+    Action: 2
+    Filter: 2147483647
+    Pattern: ffffff7f0000000000000000ffffff7f
+  - Unit: 7
+    Action: 3
+    Filter: 2147483647
+    Pattern: ffffff7f00000000ffffff7fffffff7f
+  ControlScheme:
+  - key: 122
+    beat: 4
+  - key: 120
+    beat: 2
+  - key: 99
+    beat: 1
 --- !u!1001 &938787139
 Prefab:
   m_ObjectHideFlags: 0
@@ -431,6 +515,26 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &1163522140 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1731941181242646, guid: 55078965bee3a974895511305e786986,
+    type: 2}
+  m_PrefabInternal: {fileID: 434341793}
+--- !u!114 &1163522144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1163522140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d3599b25b1560c47beb978431571a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passed: {r: 0, g: 0, b: 0, a: 0.5}
+  toDo: {r: 0, g: 0, b: 0, a: 1}
+  failed: {r: 0.1, g: 0.1, b: 0.1, a: 0.9}
+  _player: {fileID: 927793888}
 --- !u!1 &1177179562
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,3 +889,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2114495759 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1826021107771416, guid: 55078965bee3a974895511305e786986,
+    type: 2}
+  m_PrefabInternal: {fileID: 434341793}
+--- !u!114 &2114495763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2114495759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d3599b25b1560c47beb978431571a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passed: {r: 0, g: 0, b: 0, a: 0.5}
+  toDo: {r: 0, g: 0, b: 0, a: 1}
+  failed: {r: 0.1, g: 0.1, b: 0.1, a: 0.9}
+  _player: {fileID: 132555110}
