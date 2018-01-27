@@ -6,24 +6,25 @@ namespace Assets.Scripts.Units
     {
         [SerializeField] private float _defense = 0;
         [SerializeField] private float _holdingDamage;
+        [SerializeField] private float _movementDelay;
         private bool _isHolding;
 
         public override void MoveForward()
         {
-            StopHolding();
             base.MoveForward();
+            StopHolding();
         }
 
         public override void MoveBackWards()
         {
-            StopHolding();
             base.MoveBackWards();
+            StopHolding();
         }
 
         public override void StopMoving()
         {
-            StartHolding();
             base.StopMoving();
+            StartHolding();
         }
 
         public override void ApplyDamage(float damage)
@@ -54,6 +55,14 @@ namespace Assets.Scripts.Units
 
             _isHolding = false;
             AttackController.TriggerEntered -= DoSpearDamage;
+            
+            base.StopMoving();
+            Invoke("StartMoving", _movementDelay);
+        }
+
+        private new void StartMoving()
+        {
+            base.StartMoving();
         }
 
         private void DoSpearDamage(Unit enemy)

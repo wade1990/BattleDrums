@@ -11,6 +11,8 @@ public class Unit : MonoBehaviour
 
     private Vector3 _moveDirection;
 
+    private bool _isMoving;
+
     private void Awake()
     {
         _healthController = GetComponent<HealthController>();
@@ -25,16 +27,23 @@ public class Unit : MonoBehaviour
     public virtual void MoveForward()
     {
         _moveDirection = ForwardDirection;
+        StartMoving();
     }
 
     public virtual void MoveBackWards()
     {
         _moveDirection = -ForwardDirection;
+        StartMoving();
     }
-
+    
+    protected void StartMoving()
+    {
+        _isMoving = true;
+    }
+    
     public virtual void StopMoving()
     {
-        _moveDirection = Vector3.zero;
+        _isMoving = false;
     }
 
     public virtual void Attack()
