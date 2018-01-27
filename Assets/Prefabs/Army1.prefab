@@ -35,8 +35,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4026293461308110}
+  - component: {fileID: 114007508808706150}
   - component: {fileID: 114345269830803074}
-  - component: {fileID: 114673507023497570}
   - component: {fileID: 50445275007191650}
   - component: {fileID: 61973465967894740}
   m_Layer: 0
@@ -118,8 +118,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4401667382432466}
+  - component: {fileID: 114437674635082434}
   - component: {fileID: 114292347115678066}
-  - component: {fileID: 114521973665263288}
   - component: {fileID: 50474923602881400}
   - component: {fileID: 61959497449036164}
   m_Layer: 0
@@ -266,8 +266,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4451507959741506}
+  - component: {fileID: 114615876817558444}
   - component: {fileID: 114649612750205472}
-  - component: {fileID: 114212751800634304}
   - component: {fileID: 50914214306383940}
   - component: {fileID: 61340450496497718}
   m_Layer: 0
@@ -652,7 +652,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.28, y: 0}
+  m_Offset: {x: 0.85, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -663,7 +663,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.75, y: 0.58}
+  m_Size: {x: 0.4, y: 0.58}
   m_EdgeRadius: 0
 --- !u!61 &61824596963077906
 BoxCollider2D:
@@ -740,19 +740,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.95, y: 2.9}
   m_EdgeRadius: 0
---- !u!114 &114212751800634304
+--- !u!114 &114007508808706150
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1843806745973610}
+  m_GameObject: {fileID: 1122012807229970}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6691b34d27755e4ea785b897ee22da3, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a9bbb3db6141dd47a0e14ac2602c16e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ForwardDirection: {x: 1, y: 0}
-  Speed: 0.025
+  Speed: 0.015
+  _beatsPerDamage: 0
 --- !u!114 &114292347115678066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -800,9 +801,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6812581c6f3614c92cac0c5431651a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _archers: {fileID: 114673507023497570}
-  _horsemen: {fileID: 114212751800634304}
-  _spearmen: {fileID: 114521973665263288}
+  _archers: {fileID: 114007508808706150}
+  _horsemen: {fileID: 114615876817558444}
+  _spearmen: {fileID: 114437674635082434}
+--- !u!114 &114437674635082434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1267678297523208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44a5602862e15b54da329b954af40fb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ForwardDirection: {x: 1, y: 0}
+  Speed: 0.02
+  _defense: 0
+  _holdingDamage: 0
+  _movementDelay: 0
 --- !u!114 &114519613521561496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -817,19 +834,19 @@ MonoBehaviour:
   _unit: 1
   _action: 0
   _mouseButton: 0
---- !u!114 &114521973665263288
+--- !u!114 &114615876817558444
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1267678297523208}
+  m_GameObject: {fileID: 1843806745973610}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6691b34d27755e4ea785b897ee22da3, type: 3}
+  m_Script: {fileID: 11500000, guid: 860df511c6dd426459ccc23144e485ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ForwardDirection: {x: 1, y: 0}
-  Speed: 0.02
+  Speed: 0.025
 --- !u!114 &114649612750205472
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -848,19 +865,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
---- !u!114 &114673507023497570
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1122012807229970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6691b34d27755e4ea785b897ee22da3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ForwardDirection: {x: 1, y: 0}
-  Speed: 0.015
 --- !u!212 &212066973660333078
 SpriteRenderer:
   m_ObjectHideFlags: 1
