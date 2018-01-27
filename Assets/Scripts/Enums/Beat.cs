@@ -1,5 +1,8 @@
 ﻿using System;
 
+/// <summary>
+/// Different types of beats.
+/// </summary>
 [Flags]
 public enum Beat : int
 {
