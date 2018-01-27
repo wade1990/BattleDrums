@@ -67,12 +67,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88c651fdb80f1e74daa6becd3878aaef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0.01
+  _speed: 14.76
   _targetReached:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  _timeBeforeFading: 2.3
+  _fadingDuration: 0.25
 --- !u!212 &212107784921141562
 SpriteRenderer:
   m_ObjectHideFlags: 1

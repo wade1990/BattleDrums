@@ -28,8 +28,8 @@ public struct BeatSymbol
 
 public class Karaoke : MonoBehaviour {
     public Color passed = new Color(0f,0f,0f,.5f);
-    public Color toDo = new Color(0f, 0f, 0f, 1f);
-    public Color failed = new Color(0.1f, 0.1f, 0.1f, .9f);
+    public Color toDo = new Color(0f, 1f, 0f, 1f);
+    public Color failed = new Color(1f, 0.1f, 0.1f, .9f);
     public ActionTitle[] Titles = { new ActionTitle(ActionType.MoveForwards, "Move Forward:"), new ActionTitle(ActionType.MoveBackwards, "Move Backwards:"),  new ActionTitle(ActionType.Stay, "Hold:"), new ActionTitle(ActionType.Action, "Act:") };
     public BeatSymbol[] Symbols = { new BeatSymbol(Beat.All, "X"), new BeatSymbol(Beat.None, ".") };
     
@@ -65,12 +65,12 @@ public class Karaoke : MonoBehaviour {
                 _textField.text += "<color='#" + ColorUtility.ToHtmlStringRGBA(passed) + "'>";
                 for (int i = 0; i < rhythm.Pattern.Length; i++)
                 {
-                    if (i == rhythm.GetCurrentBeat())
+                    if (i == ((rhythm.GetCurrentBeat()+1) % rhythm.Pattern.Length))
                     {
-                        _textField.text += "</color><color='#" + ColorUtility.ToHtmlStringRGBA(rhythm.Broken() ? failed : toDo) + "'>";
+                        _textField.text += "</color><color='#" + ColorUtility.ToHtmlStringRGBA(rhythm.Broken() && i != 0 ? failed : toDo) + "'>";
                     }
 
-                    for(int j = 0; j < Symbols.Length; j++)
+                    for (int j = 0; j < Symbols.Length; j++)
                     {
                         if (Symbols[j].beat == Beat.None || (rhythm.Pattern[i] & Symbols[j].beat) != Beat.None)
                         {

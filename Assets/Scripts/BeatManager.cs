@@ -11,6 +11,8 @@ namespace Assets.Scripts
         /// </summary>
         [SerializeField] private int _beatsPerMinute;
 
+        [SerializeField] private float _startupDelay;
+
         /// <summary>
         /// Static instance <see cref="BeatManager"/>.
         /// </summary>
@@ -27,9 +29,21 @@ namespace Assets.Scripts
         public UnityEvent Beat;
         public UnityEvent HalfTimeBeat;
 
+        public UnityEvent Nextbeat;
+        public UnityEvent NextHalfbeat;
+
         private void Awake()
         {
             Instance = this;
+        }
+
+        private void Start()
+        {
+            Invoke("DropDaBeat", _startupDelay);
+        }
+
+        private void DropDaBeat()
+        {
             StartCoroutine(OpDaBeat());
         }
 
@@ -42,10 +56,19 @@ namespace Assets.Scripts
             while (true)
             {
                 Beat.Invoke();
+                InvokeAndClear(Nextbeat);
                 yield return new WaitForSeconds(BeatTime / 2);
+
                 HalfTimeBeat.Invoke();
+                InvokeAndClear(NextHalfbeat);
                 yield return new WaitForSeconds(BeatTime / 2);
             }
+        }
+
+        private static void InvokeAndClear(UnityEvent unityEvent)
+        {
+            unityEvent.Invoke();
+            unityEvent.RemoveAllListeners();
         }
     }
 }
