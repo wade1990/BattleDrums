@@ -21,7 +21,7 @@ public struct KeyToBeat
 /// </summary>
 public class InputHandler : MonoBehaviour, IRhythmInput {
 
-    [SerializeField] Rhythm[] PatternList;
+    [SerializeField] Rhythm[] PatternList = { };
     public KeyToBeat[] ControlScheme = { new KeyToBeat(KeyCode.Z, Beat.High), new KeyToBeat(KeyCode.X, Beat.Mid), new KeyToBeat(KeyCode.C, Beat.Low) } ;
 
     private Beat beats = Beat.None;
@@ -33,7 +33,7 @@ public class InputHandler : MonoBehaviour, IRhythmInput {
     {
         BeatManager.Instance.Beat.AddListener(RunBeat);
         foreach (Rhythm rhythm in PatternList)
-            rhythm.ValidInputMade += ValidInputMade;
+            rhythm.ValidInputMade += InputComplete;
 	}
 	
 	// Update is called once per frame
@@ -48,11 +48,16 @@ public class InputHandler : MonoBehaviour, IRhythmInput {
         }
 	}
 
+    private void InputComplete(UnitType unit, ActionType action)
+    {
+        ValidInputMade.Invoke(unit, action);
+    }
+
     public void RunBeat()
     {
-        foreach(Rhythm matcher in PatternList)
+        foreach(Rhythm rhythm in PatternList)
         {
-            matcher.Match(beats);
+            rhythm.Match(beats);
         }
         beats = Beat.None;
     }
