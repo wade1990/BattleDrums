@@ -362,51 +362,9 @@ Prefab:
       propertyPath: _spawnCount
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114401166814581964, guid: 117a163902187b54e803a3ed5745c0db, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 117a163902187b54e803a3ed5745c0db, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &938787140 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1812749556466786, guid: 117a163902187b54e803a3ed5745c0db,
-    type: 2}
-  m_PrefabInternal: {fileID: 938787139}
---- !u!114 &938787141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 938787140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 269d1b66671e2eb4b87f78351020a3b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _toneToUnit: 1
-  PatternList:
-  - Unit: 7
-    Action: 0
-    Filter: 2147483647
-    Pattern: ffffff7f00000000ffffff7f00000000
-  - Unit: 7
-    Action: 1
-    Filter: 2147483647
-    Pattern: ffffff7fffffff7f0000000000000000
-  - Unit: 7
-    Action: 2
-    Filter: 2147483647
-    Pattern: ffffff7f0000000000000000ffffff7f
-  - Unit: 7
-    Action: 3
-    Filter: 2147483647
-    Pattern: ffffff7f00000000ffffff7fffffff7f
-  ControlScheme:
-  - key: 122
-    beat: 4
-  - key: 120
-    beat: 2
-  - key: 99
-    beat: 1
 --- !u!1 &1018090089
 GameObject:
   m_ObjectHideFlags: 0
