@@ -1,29 +1,54 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
+[RequireComponent(typeof(IRhythmInput))]
 public class Player : MonoBehaviour
 {
-    [SerializeField] private GameObject _archers;
-    [SerializeField] private GameObject _horsemen;
-    [SerializeField] private GameObject _spearmen;
+    [SerializeField] private Unit _archers;
+    [SerializeField] private Unit _horsemen;
+    [SerializeField] private Unit _spearmen;
+    
+    private IRhythmInput _rhythmInput;
 
-    [SerializeField] private Unit _chosenUnit;
-
-    [SerializeField] private float speed;
-
-    public Unit SelectedUnit { get; private set; }
-
-    public void DoCombat(Transform battleStartpoint, Transform battleEndPoint, float duration)
+    private void Awake()
     {
-
+        _rhythmInput = GetComponent<IRhythmInput>();
+        _rhythmInput.ValidInputMade += PerformAction;
     }
 
-    public void StartReadingInput()
+    private void PerformAction(UnitType unitType, ActionType actionType)
     {
+        Unit unit = GetUnit(unitType);
 
+        switch (actionType)
+        {
+            case ActionType.MoveForwards:
+                unit.MoveForward();
+                break;
+            case ActionType.MoveBackwards:
+                unit.MoveBackWards();
+                break;
+            case ActionType.Stay:
+                unit.StopMoving();
+                break;
+            case ActionType.Action:
+                unit.PerformAction();
+                break;
+        }
     }
 
-    public void StopReadingInput()
+    private Unit GetUnit(UnitType unitType)
     {
+        switch (unitType)
+        {
+            case UnitType.Archers:
+                return _archers;
+            case UnitType.Horsemen:
+                return _horsemen;
+            case UnitType.Spearman:
+                return _spearmen;
+        }
 
+        throw new ArgumentOutOfRangeException();
     }
 }
