@@ -1,4 +1,4 @@
-﻿public enum Unit
+﻿public enum UnitType
 {
     None,
     Archers,
