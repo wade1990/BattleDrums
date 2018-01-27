@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-public enum BeatType
+﻿public enum BeatType
 {
     High,
     Mid,
@@ -21,6 +16,4 @@ public struct Beat
         Time = time;
         Type = type;
     }
-
-        
 }
