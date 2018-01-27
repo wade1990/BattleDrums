@@ -85,7 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4846985780454018}
   - component: {fileID: 61659827302612566}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: AttackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4950410569360242}
   - component: {fileID: 61365805250304232}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: AttackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 114806746714073102}
   - component: {fileID: 50076730261528906}
   - component: {fileID: 61716910755356700}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HorsemenUnit2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4774655833024160}
   - component: {fileID: 61616383726586774}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: AttackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 114704231187036448}
   - component: {fileID: 50665689408477676}
   - component: {fileID: 61601977808464850}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ArchersUnit2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -286,7 +286,7 @@ GameObject:
   - component: {fileID: 114795877927483512}
   - component: {fileID: 50474245450900252}
   - component: {fileID: 61087527767874480}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SpearmenUnit2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

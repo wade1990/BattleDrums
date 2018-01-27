@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 114345269830803074}
   - component: {fileID: 50445275007191650}
   - component: {fileID: 61973465967894740}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArchersUnit1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 114292347115678066}
   - component: {fileID: 50474923602881400}
   - component: {fileID: 61959497449036164}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpearmenUnit1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 114649612750205472}
   - component: {fileID: 50914214306383940}
   - component: {fileID: 61340450496497718}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HorsemenUnit1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -831,7 +831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaee001e386ea064b9aa643fc559f7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _unit: 1
+  _unit: 3
   _action: 0
   _mouseButton: 0
 --- !u!114 &114615876817558444
