@@ -1,14 +1,15 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
-using Assets.Scripts;
-using System;
+using Random = UnityEngine.Random;
 
 [System.Serializable]
 public struct KeyToBeat
 {
     public KeyCode key;
     public Beat beat;
+
     public KeyToBeat(KeyCode key, Beat beat)
     {
         this.key = key;
@@ -19,6 +20,7 @@ public struct KeyToBeat
 /// <summary>
 /// Controller Controller
 /// </summary>
+[RequireComponent(typeof(AudioSource))]
 public class InputHandler : MonoBehaviour, IRhythmInput
 {
     [SerializeField]
@@ -32,6 +34,7 @@ public class InputHandler : MonoBehaviour, IRhythmInput
     private Beat beats = Beat.None;
 
     public event Action<UnitType, ActionType> ValidInputMade;
+    public event Action<Beat> BeatMade;
 
     // Use this for initialization
     void Start()
@@ -70,10 +73,14 @@ public class InputHandler : MonoBehaviour, IRhythmInput
         {
             if (Input.GetKeyDown(pair.key))
             {
+                if (BeatMade != null)
+                    BeatMade.Invoke(pair.beat);
+
                 beats |= pair.beat;
             }
         }
     }
+
 
     private void InputComplete(UnitType unit, ActionType action)
     {
