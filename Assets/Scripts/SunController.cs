@@ -10,22 +10,8 @@ public class SunController : MonoBehaviour
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+        _animator.speed = 60f / BeatManager.Instance.BeatTime * 4;
     }
 
-    private void Start()
-    {
-        BeatManager.Instance.Beat.AddListener(OnTheBeat);
-    }
 
-    private void OnTheBeat()
-    {
-        if (_beatIndex % 4 == 0)
-        {
-            _animator.SetTrigger("GreenPulse");
-        }
-        else
-            _animator.SetTrigger("Pulse");
-
-        _beatIndex++;
-    }
 }
