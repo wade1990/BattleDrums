@@ -3,6 +3,6 @@
     None,
     Archers,
     Horsemen,
-    Spearman
+    Spearmen
 }
 
