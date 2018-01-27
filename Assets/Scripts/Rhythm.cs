@@ -1,54 +1,75 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
+using System.Linq;
+using System.Text;
 
-public struct Rhythm
+[System.Serializable]
+public class Rhythm : IRhythmInput
 {
-    /// <summary>
-    /// List of Beats.
-    /// </summary>
-    private List<Beat> _sequence;   
-  
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="sequence">The sequence </param>
-    public Rhythm(List<Beat> sequence)
+    public UnitType Unit;
+    public ActionType Action;
+    public event Action<UnitType, ActionType> ValidInputMade;
+
+    public Beat Filter;
+
+    public Beat[] Pattern;
+
+    private int _currentBeat;
+    private bool _broken;
+
+    public Rhythm(UnitType unit, ActionType action, Beat[] pattern, Beat filter = Beat.All)
     {
-        _sequence = sequence;
+        Unit = unit;
+        Action = action;
+        Pattern = pattern;
+        Filter = filter;
     }
 
-    /// <summary>
-    /// List of intervals, alternating on and off.
-    /// </summary>
-    public List<Beat> Sequence
+    public bool Match(Beat beat)
     {
-        get { return _sequence; }
+        //Check if we started a new bar.
+        _currentBeat++;
+        if (_currentBeat == Pattern.Count())
+            Reset();
+
+        //Return if already broken.
+        if (_broken)
+            return false;
+
+        //Match the current beat.
+        if((Pattern[_currentBeat] & Filter) != (beat & Filter))
+        {
+            _broken = true;
+            return false;
+        }
+
+        //Check if pattern is completed.
+        if(Matched())
+        {
+            Complete();
+        }
+
+        return true;
     }
-    
-    public void Append(Beat beat)
+
+    private void Complete()
     {
-        if (_sequence == null)
-            _sequence = new List<Beat>();
-        Sequence.Add(beat);
+        ValidInputMade.Invoke(Unit, Action);
     }
 
-    /// <summary>
-    /// Compares two sequences
-    /// </summary>
-    /// <returns>The error</returns>
-    public float Compare(Rhythm other)
+    public bool Broken()
     {
-        float similarity = 0;
-
-
-        return 0;
+        return _broken;
     }
 
-    /* TODO
-    public static Rhythm operator *(Rhythm rhythm, float speed)
+    public bool Matched()
     {
-
+        return !_broken && (_currentBeat == Pattern.Count() - 1);
     }
-    */
+
+    public void Reset()
+    {
+        _broken = false;
+        _currentBeat = 0;
+    }
 }

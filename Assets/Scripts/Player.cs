@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Assets.Scripts.Units;
 using UnityEngine;
 
@@ -19,37 +20,39 @@ public class Player : MonoBehaviour
 
     private void PerformAction(UnitType unitType, ActionType actionType)
     {
-        Unit unit = GetUnit(unitType);
+        List<Unit> units = GetUnits(unitType);
 
         switch (actionType)
         {
             case ActionType.MoveForwards:
-                unit.MoveForward();
+                foreach(Unit unit in units)
+                    unit.MoveForward();
                 break;
             case ActionType.MoveBackwards:
-                unit.MoveBackWards();
+                foreach (Unit unit in units)
+                    unit.MoveBackWards();
                 break;
             case ActionType.Stay:
-                unit.StopMoving();
+                foreach (Unit unit in units)
+                    unit.StopMoving();
                 break;
             case ActionType.Action:
-                unit.Attack();
+                foreach (Unit unit in units)
+                    unit.Attack();
                 break;
         }
     }
 
-    private Unit GetUnit(UnitType unitType)
+    private List<Unit> GetUnits(UnitType unitType)
     {
-        switch (unitType)
-        {
-            case UnitType.Archers:
-                return _archers;
-            case UnitType.Horsemen:
-                return _horsemen;
-            case UnitType.Spearmen:
-                return _spearmen;
-        }
+        List<Unit> units = new List<Unit>();
+        if((unitType & UnitType.Archers) == UnitType.Archers)
+                units.Add(_archers);
+        if ((unitType & UnitType.Horsemen) == UnitType.Horsemen)
+                units.Add( _horsemen);
+        if ((unitType & UnitType.Spearmen) == UnitType.Spearmen)
+            units.Add(_spearmen);
 
-        throw new ArgumentOutOfRangeException();
+        return units;
     }
 }
