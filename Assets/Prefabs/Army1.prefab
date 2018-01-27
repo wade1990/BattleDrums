@@ -55,6 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4787600258204070}
   - component: {fileID: 61446494687981366}
+  - component: {fileID: 114091736478245848}
   m_Layer: 9
   m_Name: AttackRange
   m_TagString: Untagged
@@ -71,6 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4909973912851132}
   - component: {fileID: 61193731473426212}
+  - component: {fileID: 114571616424219408}
   m_Layer: 9
   m_Name: AttackRange
   m_TagString: Untagged
@@ -138,6 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4219827803584702}
   - component: {fileID: 61824596963077906}
+  - component: {fileID: 114243970664371858}
   m_Layer: 9
   m_Name: AttackRange
   m_TagString: Untagged
@@ -754,6 +757,30 @@ MonoBehaviour:
   ForwardDirection: {x: 1, y: 0}
   Speed: 0.015
   _beatsPerDamage: 0
+--- !u!114 &114091736478245848
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1193458055852494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba384bbc694a4074a800829bcd9baf02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 0
+--- !u!114 &114243970664371858
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1282233509730540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba384bbc694a4074a800829bcd9baf02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 0
 --- !u!114 &114292347115678066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -834,6 +861,18 @@ MonoBehaviour:
   _unit: 3
   _action: 0
   _mouseButton: 0
+--- !u!114 &114571616424219408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1205701770893882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba384bbc694a4074a800829bcd9baf02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 0
 --- !u!114 &114615876817558444
 MonoBehaviour:
   m_ObjectHideFlags: 1
