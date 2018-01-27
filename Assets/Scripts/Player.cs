@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Assets.Scripts.Units;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(IRhythmInput))]
 public class Player : MonoBehaviour
@@ -16,6 +17,12 @@ public class Player : MonoBehaviour
     {
         _rhythmInput = GetComponent<IRhythmInput>();
         _rhythmInput.ValidInputMade += PerformAction;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            SceneManager.LoadScene("Menu");
     }
 
     private void PerformAction(UnitType unitType, ActionType actionType)
