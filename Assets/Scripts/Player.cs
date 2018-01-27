@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
                 unit.StopMoving();
                 break;
             case ActionType.Action:
-                unit.PerformAction();
+                unit.Attack();
                 break;
         }
     }

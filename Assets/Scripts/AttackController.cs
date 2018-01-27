@@ -1,38 +1,29 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Assets.Scripts;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 internal class AttackController : MonoBehaviour
 {
     [SerializeField] private float _damage;
-    [SerializeField] private float _beatsPerAttack;
 
-    private readonly Dictionary<Collider2D, IEnumerator> attackRoutines = new Dictionary<Collider2D, IEnumerator>();
+    private Dictionary<Collider2D, Unit> _enemiesInRange;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Unit enemy = collision.GetComponent<Unit>();
-        IEnumerator attackRoutine = AttackingRoutine(enemy);
-
-        attackRoutines[collision] = attackRoutine;
-        StartCoroutine(attackRoutine);
+        if (enemy == null)
+            return;
+        
+        _enemiesInRange[collision] = enemy;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        IEnumerator attackRoutine = attackRoutines[collision];
-        StopCoroutine(attackRoutine);
+        _enemiesInRange.Remove(collision);
     }
 
-    private IEnumerator AttackingRoutine(Unit enemy)
+    public void Attack()
     {
-        while (true)
-        {
+        foreach (Unit enemy in _enemiesInRange.Values)
             enemy.ApplyDamage(_damage);
-
-            float interval = _beatsPerAttack * BeatManager.Instance.BeatTime;
-            yield return new WaitForSeconds(interval);
-        }
     }
 }

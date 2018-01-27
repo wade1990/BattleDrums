@@ -7,11 +7,14 @@ internal class Unit : MonoBehaviour
     public float Speed;
 
     private HealthController _healthController;
+    private AttackController _attackController;
+
     private Vector3 _moveDirection;
 
     private void Awake()
     {
         _healthController = GetComponent<HealthController>();
+        _attackController = GetComponentInChildren<AttackController>();
     }
 
     private void Update()
@@ -34,8 +37,9 @@ internal class Unit : MonoBehaviour
         _moveDirection = Vector3.zero;
     }
 
-    public virtual void PerformAction()
+    public virtual void Attack()
     {
+        _attackController.Attack();
     }
 
     public void ApplyDamage(float damage)
