@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 namespace Assets.Scripts.Units
 {
@@ -7,6 +8,8 @@ namespace Assets.Scripts.Units
         [SerializeField] private float _defense = 0;
         [SerializeField] private float _holdingDamage;
         [SerializeField] private float _movementDelay;
+
+        [SerializeField] private UnityEvent _startedHolding;
         private bool _isHolding;
 
         public override void MoveForward()
@@ -45,6 +48,8 @@ namespace Assets.Scripts.Units
                 return;
 
             _isHolding = true;
+            _startedHolding.Invoke();
+
             AttackController.TriggerEntered += DoSpearDamage;
         }
 
@@ -58,11 +63,6 @@ namespace Assets.Scripts.Units
             
             base.StopMoving();
             Invoke("StartMoving", _movementDelay);
-        }
-
-        private new void StartMoving()
-        {
-            base.StartMoving();
         }
 
         private void DoSpearDamage(Unit enemy)
