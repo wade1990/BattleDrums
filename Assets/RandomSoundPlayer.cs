@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Assets.Scripts;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
@@ -31,8 +32,8 @@ internal class RandomSoundPlayer : MonoBehaviour
         }
 
         _audioSource.clip = clip;
-        _audioSource.Play();
-
         _previousClip = clip;
+
+        BeatManager.Instance.NextMeasure.AddListener(_audioSource.Play);
     }
 }
