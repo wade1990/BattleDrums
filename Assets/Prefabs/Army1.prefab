@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 114090189442092606}
   - component: {fileID: 82464643261446194}
   - component: {fileID: 114711070905838684}
+  - component: {fileID: 114680849663570882}
   m_Layer: 8
   m_Name: ArchersUnit1
   m_TagString: Untagged
@@ -1124,6 +1125,22 @@ MonoBehaviour:
   _targetArea: {fileID: 61446494687981366}
   _spawnInterval: 0.3
   _spawnCount: 1
+  _arrowsSpawned:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: PlayRandomClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &114091736478245848
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1427,6 +1444,21 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 17e31df1091e73d45a93b17d0f13d709, type: 3}
   - {fileID: 8300000, guid: 67349c72621a7c649a8fcd7a50b2bfdc, type: 3}
   - {fileID: 8300000, guid: 3f8b7c1d3ddfe4241833547c31fead8f, type: 3}
+--- !u!114 &114680849663570882
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1122012807229970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a899cb26e749a0e429fa8c632c8ba6ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _possibleClips:
+  - {fileID: 8300000, guid: 26995ef1b73fcb343afa68290e97936e, type: 3}
+  - {fileID: 8300000, guid: ff393fca4a1764140a5632cb342dfbe5, type: 3}
+  - {fileID: 8300000, guid: e83285b54f7a6b44ab156b7b4e1e4c61, type: 3}
 --- !u!114 &114711070905838684
 MonoBehaviour:
   m_ObjectHideFlags: 1
