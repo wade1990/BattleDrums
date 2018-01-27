@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4064176254201948}
   - component: {fileID: 212872311557867802}
   - component: {fileID: 95428482535334010}
+  - component: {fileID: 114151508134080994}
   m_Layer: 8
   m_Name: Spearmen1
   m_TagString: Untagged
@@ -38,6 +39,7 @@ GameObject:
   - component: {fileID: 4912548386769032}
   - component: {fileID: 212114869202112874}
   - component: {fileID: 95137261679673774}
+  - component: {fileID: 114829888905883788}
   m_Layer: 8
   m_Name: Spearmen1
   m_TagString: Untagged
@@ -177,6 +179,7 @@ GameObject:
   - component: {fileID: 4359137752709528}
   - component: {fileID: 212195884211828822}
   - component: {fileID: 95706175903504438}
+  - component: {fileID: 114444080443198922}
   m_Layer: 8
   m_Name: Spearmen1
   m_TagString: Untagged
@@ -1062,6 +1065,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 100
+--- !u!114 &114151508134080994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1125981300650928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb70606a5d40a584e82b59be7bedbdef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _baseBPM: 60
 --- !u!114 &114165468775539204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1189,6 +1204,18 @@ MonoBehaviour:
   _possibleClips:
   - {fileID: 8300000, guid: 5f01560c8f038c3418eca534e47721ef, type: 3}
   - {fileID: 8300000, guid: 225252c0ee106774abb7a36d876a166c, type: 3}
+--- !u!114 &114444080443198922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683810857068900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb70606a5d40a584e82b59be7bedbdef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _baseBPM: 60
 --- !u!114 &114480976601958718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1495,6 +1522,18 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+--- !u!114 &114829888905883788
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1184202364920482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb70606a5d40a584e82b59be7bedbdef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _baseBPM: 60
 --- !u!114 &114854332241333810
 MonoBehaviour:
   m_ObjectHideFlags: 1
