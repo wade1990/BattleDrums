@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 50445275007191650}
   - component: {fileID: 61973465967894740}
   - component: {fileID: 114486872376713136}
+  - component: {fileID: 114162203236979446}
   m_Layer: 8
   m_Name: ArchersUnit1
   m_TagString: Untagged
@@ -500,7 +501,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1812749556466786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.44, y: -3.5, z: 0}
+  m_LocalPosition: {x: -7.44, y: -3.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4026293461308110}
@@ -783,6 +784,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 100
+--- !u!114 &114162203236979446
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1122012807229970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac7d7f644ae9594abcbfd75c0da846f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _arrowPrefab: {fileID: 114220027803170898, guid: f3ce3b5c86f5efa42b14635a32b3415b,
+    type: 2}
+  _targetArea: {fileID: 61446494687981366}
+  _spawnInterval: 1
+  _spawnCount: 3
 --- !u!114 &114243970664371858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -905,8 +922,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaee001e386ea064b9aa643fc559f7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _unit: 3
-  _action: 0
+  _unit: 1
+  _action: 3
   _mouseButton: 0
 --- !u!114 &114536845478404588
 MonoBehaviour:

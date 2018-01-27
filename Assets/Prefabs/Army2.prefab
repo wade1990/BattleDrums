@@ -208,6 +208,7 @@ GameObject:
   - component: {fileID: 50665689408477676}
   - component: {fileID: 61601977808464850}
   - component: {fileID: 114673227105177544}
+  - component: {fileID: 114275133931270234}
   m_Layer: 10
   m_Name: ArchersUnit2
   m_TagString: Untagged
@@ -794,6 +795,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114275133931270234
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1759048146524112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac7d7f644ae9594abcbfd75c0da846f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _arrowPrefab: {fileID: 114220027803170898, guid: f3ce3b5c86f5efa42b14635a32b3415b,
+    type: 2}
+  _targetArea: {fileID: 0}
+  _spawnInterval: 0.1
+  _spawnCount: 3
 --- !u!114 &114275230403690972
 MonoBehaviour:
   m_ObjectHideFlags: 1
