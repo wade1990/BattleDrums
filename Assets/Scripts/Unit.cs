@@ -1,29 +1,36 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(HealthController))]
 internal class Unit : MonoBehaviour
 {
+    public Vector2 ForwardDirection;
+
     private HealthController _healthController;
+    private Vector3 _moveDirection;
 
     private void Awake()
     {
         _healthController = GetComponent<HealthController>();
     }
 
+    private void Update()
+    {
+        gameObject.transform.position += _moveDirection;
+    }
+
     public void MoveForward()
     {
-        throw new NotImplementedException();
+        _moveDirection = ForwardDirection;
     }
 
     public void MoveBackWards()
     {
-        throw new NotImplementedException();
+        _moveDirection = -ForwardDirection;
     }
 
     public void StopMoving()
     {
-        throw new NotImplementedException();
+        _moveDirection = Vector3.zero;
     }
 
     public virtual void PerformAction()
