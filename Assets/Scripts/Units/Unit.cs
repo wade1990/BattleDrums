@@ -13,7 +13,7 @@ public class Unit : MonoBehaviour
 
     private bool _isMoving;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         _healthController = GetComponent<HealthController>();
         AttackController = GetComponentInChildren<AttackController>();
