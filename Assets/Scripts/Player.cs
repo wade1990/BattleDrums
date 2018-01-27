@@ -1,54 +1,54 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
+[RequireComponent(typeof(IRhythmInput))]
 public class Player : MonoBehaviour
 {
-    [SerializeField] private GameObject _archers;
-    [SerializeField] private GameObject _horsemen;
-    [SerializeField] private GameObject _spearmen;
+    [SerializeField] private Unit _archers;
+    [SerializeField] private Unit _horsemen;
+    [SerializeField] private Unit _spearmen;
+    
+    private IRhythmInput _rhythmInput;
 
-    [SerializeField] private GameObject _middle;
-
-    [SerializeField] private Unit _chosenUnit;
-
-    [SerializeField] private float speed;
-
-    public Unit SelectedUnit { get; private set; }
-
-    private void Update()
+    private void Awake()
     {
-        switch (_chosenUnit)
+        _rhythmInput = GetComponent<IRhythmInput>();
+        _rhythmInput.ValidInputMade += PerformAction;
+    }
+
+    private void PerformAction(UnitType unitType, ActionType actionType)
+    {
+        Unit unit = GetUnit(unitType);
+
+        switch (actionType)
         {
-            case Unit.Archers:
-                MoveUnit(_archers);
+            case ActionType.MoveForwards:
+                unit.MoveForward();
                 break;
-            case Unit.Horsemen:
-                MoveUnit(_horsemen);
+            case ActionType.MoveBackwards:
+                unit.MoveBackWards();
                 break;
-            case Unit.Spearman:
-                MoveUnit(_spearmen);
+            case ActionType.Stay:
+                unit.StopMoving();
                 break;
-            case Unit.None:
+            case ActionType.Action:
+                unit.PerformAction();
                 break;
         }
     }
 
-    private void MoveUnit(GameObject unit)
+    private Unit GetUnit(UnitType unitType)
     {
-        unit.transform.position = Vector3.MoveTowards(unit.transform.position, _middle.transform.position, speed);
-    }
+        switch (unitType)
+        {
+            case UnitType.Archers:
+                return _archers;
+            case UnitType.Horsemen:
+                return _horsemen;
+            case UnitType.Spearman:
+                return _spearmen;
+        }
 
-    public void DoCombat(Transform battleStartpoint, Transform battleEndPoint, float duration)
-    {
-
-    }
-
-    public void StartReadingInput()
-    {
-
-    }
-
-    public void StopReadingInput()
-    {
-
+        throw new ArgumentOutOfRangeException();
     }
 }
