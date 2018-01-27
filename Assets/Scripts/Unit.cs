@@ -29,7 +29,7 @@ internal class Unit : MonoBehaviour
         _moveDirection = -ForwardDirection;
     }
 
-    public void StopMoving()
+    public virtual void StopMoving()
     {
         _moveDirection = Vector3.zero;
     }
