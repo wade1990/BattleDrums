@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
                 return _archers;
             case UnitType.Horsemen:
                 return _horsemen;
-            case UnitType.Spearman:
+            case UnitType.Spearmen:
                 return _spearmen;
         }
 

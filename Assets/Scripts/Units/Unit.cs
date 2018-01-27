@@ -1,20 +1,20 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(HealthController))]
-internal class Unit : MonoBehaviour
+public class Unit : MonoBehaviour
 {
     public Vector2 ForwardDirection;
     public float Speed;
 
     private HealthController _healthController;
-    private AttackController _attackController;
+    protected AttackController AttackController;
 
     private Vector3 _moveDirection;
 
     private void Awake()
     {
         _healthController = GetComponent<HealthController>();
-        _attackController = GetComponentInChildren<AttackController>();
+        AttackController = GetComponentInChildren<AttackController>();
     }
 
     private void Update()
@@ -22,27 +22,28 @@ internal class Unit : MonoBehaviour
         gameObject.transform.position += _moveDirection * Speed;
     }
 
-    public void MoveForward()
+    public virtual void MoveForward()
     {
         _moveDirection = ForwardDirection;
     }
 
-    public void MoveBackWards()
+    public virtual void MoveBackWards()
     {
         _moveDirection = -ForwardDirection;
     }
 
-    public void StopMoving()
+    public virtual void StopMoving()
     {
         _moveDirection = Vector3.zero;
     }
 
     public virtual void Attack()
     {
-        _attackController.Attack();
+        StopMoving();
+        AttackController.Attack();
     }
 
-    public void ApplyDamage(float damage)
+    public virtual void ApplyDamage(float damage)
     {
         _healthController.Health -= damage;
     }
