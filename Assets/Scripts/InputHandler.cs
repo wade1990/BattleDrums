@@ -27,23 +27,23 @@ public class InputHandler : MonoBehaviour, IRhythmInput
     [SerializeField]
     Rhythm[] PatternList = { };
 
-    public KeyToBeat[] ControlScheme = { new KeyToBeat(KeyCode.Z, Beat.High), new KeyToBeat(KeyCode.X, Beat.Mid), new KeyToBeat(KeyCode.C, Beat.Low) } ;
+    public KeyToBeat[] ControlScheme = { new KeyToBeat(KeyCode.Z, Beat.High), new KeyToBeat(KeyCode.X, Beat.Mid), new KeyToBeat(KeyCode.C, Beat.Low) };
 
     private Beat beats = Beat.None;
 
     public event Action<UnitType, ActionType> ValidInputMade;
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         BeatManager.Instance.HalfTimeBeat.AddListener(RunBeat);
 
 
         // If we pick one unit per tone
-        if(_toneToUnit)
+        if (_toneToUnit)
         {
             List<Rhythm> rhythms = new List<Rhythm>();
-            foreach(Rhythm baseRhythm in PatternList)
+            foreach (Rhythm baseRhythm in PatternList)
             {
                 if ((baseRhythm.Unit & UnitType.Archers) == UnitType.Archers)
                     rhythms.Add(new Rhythm(UnitType.Archers, baseRhythm.Action, baseRhythm.Pattern, (Beat)UnitType.Archers));
@@ -62,9 +62,9 @@ public class InputHandler : MonoBehaviour, IRhythmInput
         foreach (Rhythm rhythm in PatternList)
             rhythm.ValidInputMade += InputComplete;
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
         foreach (KeyToBeat pair in ControlScheme)
         {
@@ -73,16 +73,17 @@ public class InputHandler : MonoBehaviour, IRhythmInput
                 beats |= pair.beat;
             }
         }
-	}
+    }
 
     private void InputComplete(UnitType unit, ActionType action)
     {
-        ValidInputMade.Invoke(unit, action);
+        if (ValidInputMade != null)
+            ValidInputMade.Invoke(unit, action);
     }
 
     public void RunBeat()
     {
-        foreach(Rhythm rhythm in PatternList)
+        foreach (Rhythm rhythm in PatternList)
         {
             rhythm.Match(beats);
         }
