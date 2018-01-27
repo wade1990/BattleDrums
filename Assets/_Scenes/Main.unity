@@ -349,11 +349,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114615876817558444, guid: 117a163902187b54e803a3ed5745c0db,
-        type: 2}
-      propertyPath: StartedMoving.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1561949597}
     - target: {fileID: 1812749556466786, guid: 117a163902187b54e803a3ed5745c0db, type: 2}
       propertyPath: m_Name
       value: Units1
@@ -459,8 +454,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e775d3f9f8279945a93287f7ee330be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _beatsPerMinute: 90
-  _startupDelay: 0.3
+  _beatsPerMinute: 60
+  _startupDelay: 0
   Beat:
     m_PersistentCalls:
       m_Calls: []
@@ -715,12 +710,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c73a665d2db276d4682508cc6526423a, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1561949597 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114165468775539204, guid: c73a665d2db276d4682508cc6526423a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1561949596}
-  m_Script: {fileID: 11500000, guid: a899cb26e749a0e429fa8c632c8ba6ce, type: 3}
 --- !u!1 &1966923325
 GameObject:
   m_ObjectHideFlags: 0
