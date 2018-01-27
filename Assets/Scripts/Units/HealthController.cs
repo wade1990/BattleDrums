@@ -22,6 +22,8 @@ internal class HealthController : MonoBehaviour
     /// </summary>
     [SerializeField] private UnityEvent _died;
 
+    [SerializeField] private UnityEvent _ouchieMade;
+
     /// <summary>
     /// The current value of the health.
     /// </summary>
@@ -32,6 +34,9 @@ internal class HealthController : MonoBehaviour
         {
             if (!alive)
                 return;
+
+            if (value < _health)
+                _ouchieMade.Invoke();
 
             _health = value;
             if (_health <= 0)
