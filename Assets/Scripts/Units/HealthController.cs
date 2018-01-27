@@ -61,6 +61,8 @@ internal class HealthController : MonoBehaviour
     {
         alive = false;
 
+        //todo add dead animation
+
         _died.Invoke();
         if(Died != null)
             Died.Invoke(this);
