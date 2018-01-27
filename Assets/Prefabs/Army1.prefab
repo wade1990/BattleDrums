@@ -255,7 +255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4867318805814740}
   - component: {fileID: 114383672004965396}
-  - component: {fileID: 114519613521561496}
+  - component: {fileID: 114474545932489112}
   m_Layer: 0
   m_Name: Army1
   m_TagString: Untagged
@@ -883,6 +883,42 @@ MonoBehaviour:
   _defense: 100
   _holdingDamage: 100
   _movementDelay: 0
+--- !u!114 &114474545932489112
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1812749556466786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269d1b66671e2eb4b87f78351020a3b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _toneToUnit: 1
+  PatternList:
+  - Unit: 7
+    Action: 0
+    Filter: 2147483647
+    Pattern: ffffff7f00000000ffffff7f00000000
+  - Unit: 7
+    Action: 1
+    Filter: 2147483647
+    Pattern: ffffff7fffffff7f0000000000000000
+  - Unit: 7
+    Action: 2
+    Filter: 2147483647
+    Pattern: ffffff7f0000000000000000ffffff7f
+  - Unit: 7
+    Action: 3
+    Filter: 2147483647
+    Pattern: ffffff7f00000000ffffff7fffffff7f
+  ControlScheme:
+  - key: 122
+    beat: 4
+  - key: 120
+    beat: 2
+  - key: 99
+    beat: 1
 --- !u!114 &114486872376713136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -894,20 +930,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114519613521561496
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1812749556466786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaee001e386ea064b9aa643fc559f7a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _unit: 3
-  _action: 0
-  _mouseButton: 0
 --- !u!114 &114536845478404588
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4138086069638062}
   - component: {fileID: 114681212343362432}
-  - component: {fileID: 114160406039328318}
+  - component: {fileID: 114278154741236810}
   m_Layer: 0
   m_Name: Army2
   m_TagString: Untagged
@@ -758,20 +758,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 100
---- !u!114 &114160406039328318
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1186352892875438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaee001e386ea064b9aa643fc559f7a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _unit: 1
-  _action: 0
-  _mouseButton: 1
 --- !u!114 &114192022218122842
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -807,6 +793,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ForwardDirection: {x: -1, y: 0}
   Speed: 0.025
+--- !u!114 &114278154741236810
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1186352892875438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269d1b66671e2eb4b87f78351020a3b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _toneToUnit: 1
+  PatternList:
+  - Unit: 7
+    Action: 0
+    Filter: 2147483647
+    Pattern: ffffff7f00000000ffffff7f00000000
+  - Unit: 7
+    Action: 1
+    Filter: 2147483647
+    Pattern: ffffff7fffffff7f0000000000000000
+  - Unit: 7
+    Action: 2
+    Filter: 2147483647
+    Pattern: ffffff7f0000000000000000ffffff7f
+  - Unit: 7
+    Action: 3
+    Filter: 2147483647
+    Pattern: ffffff7f00000000ffffff7fffffff7f
+  ControlScheme:
+  - key: 105
+    beat: 4
+  - key: 111
+    beat: 2
+  - key: 112
+    beat: 1
 --- !u!114 &114645237362859254
 MonoBehaviour:
   m_ObjectHideFlags: 1
