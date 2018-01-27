@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 50445275007191650}
   - component: {fileID: 61973465967894740}
   - component: {fileID: 114486872376713136}
+  - component: {fileID: 114090189442092606}
   m_Layer: 8
   m_Name: ArchersUnit1
   m_TagString: Untagged
@@ -255,7 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4867318805814740}
   - component: {fileID: 114383672004965396}
-  - component: {fileID: 114474545932489112}
+  - component: {fileID: 114401166814581964}
   m_Layer: 0
   m_Name: Army1
   m_TagString: Untagged
@@ -500,7 +501,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1812749556466786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.44, y: -3.5, z: 0}
+  m_LocalPosition: {x: -7.44, y: -3.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4026293461308110}
@@ -771,6 +772,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114090189442092606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1122012807229970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac7d7f644ae9594abcbfd75c0da846f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _arrowPrefab: {fileID: 114220027803170898, guid: f3ce3b5c86f5efa42b14635a32b3415b,
+    type: 2}
+  _targetArea: {fileID: 61446494687981366}
+  _spawnInterval: 1
+  _spawnCount: 3
 --- !u!114 &114091736478245848
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -867,6 +884,20 @@ MonoBehaviour:
   _archers: {fileID: 114007508808706150}
   _horsemen: {fileID: 114615876817558444}
   _spearmen: {fileID: 114437674635082434}
+--- !u!114 &114401166814581964
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1812749556466786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaee001e386ea064b9aa643fc559f7a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _unit: 1
+  _action: 3
+  _mouseButton: 0
 --- !u!114 &114437674635082434
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -883,42 +914,6 @@ MonoBehaviour:
   _defense: 100
   _holdingDamage: 100
   _movementDelay: 0
---- !u!114 &114474545932489112
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1812749556466786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 269d1b66671e2eb4b87f78351020a3b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _toneToUnit: 1
-  PatternList:
-  - Unit: 7
-    Action: 0
-    Filter: 2147483647
-    Pattern: ffffff7f00000000ffffff7f00000000
-  - Unit: 7
-    Action: 1
-    Filter: 2147483647
-    Pattern: ffffff7fffffff7f0000000000000000
-  - Unit: 7
-    Action: 2
-    Filter: 2147483647
-    Pattern: ffffff7f0000000000000000ffffff7f
-  - Unit: 7
-    Action: 3
-    Filter: 2147483647
-    Pattern: ffffff7f00000000ffffff7fffffff7f
-  ControlScheme:
-  - key: 122
-    beat: 4
-  - key: 120
-    beat: 2
-  - key: 99
-    beat: 1
 --- !u!114 &114486872376713136
 MonoBehaviour:
   m_ObjectHideFlags: 1

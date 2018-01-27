@@ -199,8 +199,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Attack:\nR.RL|.L.L|L.L.|L...\nStay:\nR...|L..R|R.R.|R...\nMove Forward:
-    \nR...|..RL|R...|R...\nMove Backward:\n..R.|L...|R..R|...."
+  m_Text: "Attack:\nR . R L | . L . L\nStay:\nR . . . | L . . R\nMove Forward: \nR
+    . . . | . . R L\nMove Backward:\n. . R . | L . . . "
 --- !u!114 &114732899120568468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -233,8 +233,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Attack:\nR.RL|.L.L|L.L.|L...\nStay:\nR...|L..R|R.R.|R...\nMove Forward:
-    \nR...|..RL|R...|R...\nMove Backward:\n..R.|L...|R..R|...."
+  m_Text: "Attack:\nR . R L | . L . L\nStay:\nR . . . | L . . R\nMove Forward: \nR
+    . . . | . . R L\nMove Backward:\n. . R . | L . . . "
 --- !u!114 &114998745214561794
 MonoBehaviour:
   m_ObjectHideFlags: 1

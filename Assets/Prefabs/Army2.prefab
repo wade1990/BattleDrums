@@ -794,8 +794,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _arrowPrefab: {fileID: 114220027803170898, guid: f3ce3b5c86f5efa42b14635a32b3415b,
     type: 2}
-  _targetArea: {fileID: 0}
-  _spawnInterval: 0.1
+  _targetArea: {fileID: 61365805250304232}
+  _spawnInterval: 1
   _spawnCount: 3
 --- !u!114 &114275230403690972
 MonoBehaviour:

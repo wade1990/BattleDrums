@@ -352,6 +352,11 @@ Prefab:
       propertyPath: m_Name
       value: Units1
       objectReference: {fileID: 0}
+    - target: {fileID: 114090189442092606, guid: 117a163902187b54e803a3ed5745c0db,
+        type: 2}
+      propertyPath: _spawnInterval
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 117a163902187b54e803a3ed5745c0db, type: 2}
   m_IsPrefabParent: 0
@@ -652,6 +657,11 @@ Prefab:
     - target: {fileID: 1186352892875438, guid: c73a665d2db276d4682508cc6526423a, type: 2}
       propertyPath: m_Name
       value: Units2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114275133931270234, guid: c73a665d2db276d4682508cc6526423a,
+        type: 2}
+      propertyPath: _spawnInterval
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c73a665d2db276d4682508cc6526423a, type: 2}
