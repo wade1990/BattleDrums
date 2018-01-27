@@ -54,7 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4138086069638062}
   - component: {fileID: 114681212343362432}
-  - component: {fileID: 114158982490513196}
+  - component: {fileID: 114480976601958718}
   m_Layer: 0
   m_Name: Army2
   m_TagString: Untagged
@@ -1062,20 +1062,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 100
---- !u!114 &114158982490513196
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1186352892875438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaee001e386ea064b9aa643fc559f7a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _unit: 0
-  _action: 0
-  _mouseButton: 1
 --- !u!114 &114165468775539204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1203,6 +1189,42 @@ MonoBehaviour:
   _possibleClips:
   - {fileID: 8300000, guid: 5f01560c8f038c3418eca534e47721ef, type: 3}
   - {fileID: 8300000, guid: 225252c0ee106774abb7a36d876a166c, type: 3}
+--- !u!114 &114480976601958718
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1186352892875438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269d1b66671e2eb4b87f78351020a3b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _toneToUnit: 1
+  PatternList:
+  - Unit: 7
+    Action: 3
+    Filter: 2147483647
+    Pattern: ffffff7f00000000ffffff7fffffff7f00000000ffffff7f00000000ffffff7f
+  - Unit: 7
+    Action: 2
+    Filter: 2147483647
+    Pattern: ffffff7f000000000000000000000000ffffff7f0000000000000000ffffff7f
+  - Unit: 7
+    Action: 0
+    Filter: 2147483647
+    Pattern: ffffff7f0000000000000000000000000000000000000000ffffff7fffffff7f
+  - Unit: 7
+    Action: 1
+    Filter: 2147483647
+    Pattern: 0000000000000000ffffff7f00000000ffffff7f000000000000000000000000
+  ControlScheme:
+  - key: 105
+    beat: 4
+  - key: 111
+    beat: 2
+  - key: 112
+    beat: 1
 --- !u!114 &114562501106085972
 MonoBehaviour:
   m_ObjectHideFlags: 1
