@@ -1,12 +1,13 @@
 ﻿using System;
+using Assets.Scripts.Units;
 using UnityEngine;
 
 [RequireComponent(typeof(IRhythmInput))]
 public class Player : MonoBehaviour
 {
-    [SerializeField] private Unit _archers;
-    [SerializeField] private Unit _horsemen;
-    [SerializeField] private Unit _spearmen;
+    [SerializeField] private Archers _archers;
+    [SerializeField] private Horsemen _horsemen;
+    [SerializeField] private Spearmen _spearmen;
     
     private IRhythmInput _rhythmInput;
 
