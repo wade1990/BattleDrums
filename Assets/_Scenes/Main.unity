@@ -290,7 +290,7 @@ Animator:
   m_GameObject: {fileID: 590409475}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 528475906ab786643aab7b4f4d252026, type: 2}
+  m_Controller: {fileID: 9100000, guid: ed9485bc358dfd44a87dd52ad130663d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -355,7 +355,7 @@ Prefab:
     - target: {fileID: 114090189442092606, guid: 117a163902187b54e803a3ed5745c0db,
         type: 2}
       propertyPath: _spawnInterval
-      value: 1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 114090189442092606, guid: 117a163902187b54e803a3ed5745c0db,
         type: 2}
@@ -463,7 +463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e775d3f9f8279945a93287f7ee330be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _beatsPerMinute: 150
+  _beatsPerMinute: 60
   Beat:
     m_PersistentCalls:
       m_Calls: []

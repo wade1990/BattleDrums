@@ -30,6 +30,10 @@ namespace Assets.Scripts
         private void Awake()
         {
             Instance = this;
+        }
+
+        private void Start()
+        {
             StartCoroutine(OpDaBeat());
         }
 
