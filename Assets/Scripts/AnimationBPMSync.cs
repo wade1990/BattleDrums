@@ -2,10 +2,11 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-public class SunController : MonoBehaviour
+public class AnimationBPMSync : MonoBehaviour
 {
+    [SerializeField] private float _baseBPM = 60f;
+
     private Animator _animator;
-    private int _beatIndex;
 
     private void Awake()
     {
@@ -15,7 +16,9 @@ public class SunController : MonoBehaviour
 
     private void Start()
     {
-        BeatManager.Instance.Beat.AddListener(StartPulse);
+        BeatManager beatManager = BeatManager.Instance;
+        _animator.speed = beatManager.BPM / _baseBPM;
+        beatManager.Beat.AddListener(StartPulse);
     }
 
     private void StartPulse()
