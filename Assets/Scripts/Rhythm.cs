@@ -62,6 +62,11 @@ public class Rhythm : IRhythmInput
         return _broken;
     }
 
+    public int GetCurrentBeat()
+    {
+        return _currentBeat;
+    }
+
     public bool Matched()
     {
         return !_broken && (_currentBeat == Pattern.Count() - 1);

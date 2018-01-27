@@ -31,6 +31,7 @@ namespace Assets.Scripts
         /// </summary>
         public UnityEvent Beat;
         public UnityEvent HalfTimeBeat;
+        public UnityEvent QuarterTimeBeat;
 
         public UnityEvent Nextbeat;
         public UnityEvent NextHalfbeat;
@@ -89,6 +90,7 @@ namespace Assets.Scripts
 
         private void PlayQuarterBeat()
         {
+            QuarterTimeBeat.Invoke();
             InvokeAndClear(NextMeasure);
         }
 
