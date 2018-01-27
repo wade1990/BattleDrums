@@ -85,7 +85,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4846985780454018}
   - component: {fileID: 61659827302612566}
-  m_Layer: 9
+  - component: {fileID: 114070970225641824}
+  m_Layer: 11
   m_Name: AttackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +102,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4950410569360242}
   - component: {fileID: 61365805250304232}
-  m_Layer: 9
+  - component: {fileID: 114669124912051058}
+  m_Layer: 11
   m_Name: AttackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +138,8 @@ GameObject:
   - component: {fileID: 114806746714073102}
   - component: {fileID: 50076730261528906}
   - component: {fileID: 61716910755356700}
-  m_Layer: 0
+  - component: {fileID: 114209876196163792}
+  m_Layer: 10
   m_Name: HorsemenUnit2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +187,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4774655833024160}
   - component: {fileID: 61616383726586774}
-  m_Layer: 9
+  - component: {fileID: 114762116821013888}
+  m_Layer: 11
   m_Name: AttackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +207,8 @@ GameObject:
   - component: {fileID: 114704231187036448}
   - component: {fileID: 50665689408477676}
   - component: {fileID: 61601977808464850}
-  m_Layer: 0
+  - component: {fileID: 114673227105177544}
+  m_Layer: 10
   m_Name: ArchersUnit2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -286,7 +291,8 @@ GameObject:
   - component: {fileID: 114795877927483512}
   - component: {fileID: 50474245450900252}
   - component: {fileID: 61087527767874480}
-  m_Layer: 0
+  - component: {fileID: 114192022218122842}
+  m_Layer: 10
   m_Name: SpearmenUnit2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -740,6 +746,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.95, y: 2.9}
   m_EdgeRadius: 0
+--- !u!114 &114070970225641824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1316660539677370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba384bbc694a4074a800829bcd9baf02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 100
 --- !u!114 &114160406039328318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -754,6 +772,28 @@ MonoBehaviour:
   _unit: 1
   _action: 0
   _mouseButton: 1
+--- !u!114 &114192022218122842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1987121505240718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114209876196163792
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1383474241989948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114275230403690972
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -792,11 +832,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a5602862e15b54da329b954af40fb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForwardDirection: {x: -1, y: 0}
+  ForwardDirection: {x: 1, y: 0}
   Speed: 0.02
-  _defense: 0
-  _holdingDamage: 0
+  _defense: 100
+  _holdingDamage: 100
   _movementDelay: 0
+--- !u!114 &114669124912051058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1317032667786890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba384bbc694a4074a800829bcd9baf02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 100
+--- !u!114 &114673227105177544
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1759048146524112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114681212343362432
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -826,9 +889,32 @@ MonoBehaviour:
   alive: 1
   _died:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114673227105177544}
+        m_MethodName: DestroySelf
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+--- !u!114 &114762116821013888
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1705873585332416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba384bbc694a4074a800829bcd9baf02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 100
 --- !u!114 &114795877927483512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -844,7 +930,18 @@ MonoBehaviour:
   alive: 1
   _died:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114192022218122842}
+        m_MethodName: DestroySelf
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!114 &114806746714073102
@@ -862,7 +959,18 @@ MonoBehaviour:
   alive: 1
   _died:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114209876196163792}
+        m_MethodName: DestroySelf
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!212 &212071368868894514
