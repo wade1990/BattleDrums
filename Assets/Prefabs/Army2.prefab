@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 212872311557867802}
   - component: {fileID: 95428482535334010}
   - component: {fileID: 114151508134080994}
+  - component: {fileID: 114808451904352088}
   m_Layer: 8
   m_Name: Spearmen1
   m_TagString: Untagged
@@ -72,6 +73,7 @@ GameObject:
   - component: {fileID: 212114869202112874}
   - component: {fileID: 95137261679673774}
   - component: {fileID: 114829888905883788}
+  - component: {fileID: 114505736968348688}
   m_Layer: 8
   m_Name: Spearmen1
   m_TagString: Untagged
@@ -213,6 +215,7 @@ GameObject:
   - component: {fileID: 212195884211828822}
   - component: {fileID: 95706175903504438}
   - component: {fileID: 114444080443198922}
+  - component: {fileID: 114153681045574812}
   m_Layer: 8
   m_Name: Spearmen1
   m_TagString: Untagged
@@ -937,7 +940,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -961,7 +964,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!82 &82183881893458490
 AudioSource:
   m_ObjectHideFlags: 1
@@ -1017,7 +1020,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1041,7 +1044,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!82 &82542549152820600
 AudioSource:
   m_ObjectHideFlags: 1
@@ -1257,7 +1260,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1281,7 +1284,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!82 &82833603800960542
 AudioSource:
   m_ObjectHideFlags: 1
@@ -1437,6 +1440,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _baseBPM: 60
+--- !u!114 &114153681045574812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683810857068900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114165468775539204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1534,7 +1548,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   ForwardDirection: {x: -1, y: 0}
-  Speed: 0.025
+  Speed: 0.02
 --- !u!114 &114337194856253612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1612,6 +1626,17 @@ MonoBehaviour:
     beat: 2
   - key: 112
     beat: 1
+--- !u!114 &114505736968348688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1184202364920482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114562501106085972
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1659,7 +1684,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   ForwardDirection: {x: -1, y: 0}
-  Speed: 0.015
+  Speed: 0.005
   _beatsPerDamage: 0
 --- !u!114 &114660550351525534
 MonoBehaviour:
@@ -1678,7 +1703,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   ForwardDirection: {x: -1, y: 0}
-  Speed: 0.02
+  Speed: 0.01
   _defense: 100
   _holdingDamage: 100
   _movementDelay: 0
@@ -1809,7 +1834,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114192022218122842}
-        m_MethodName: DestroySelf
+        m_MethodName: StartDieAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1882,6 +1907,17 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+--- !u!114 &114808451904352088
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1125981300650928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114829888905883788
 MonoBehaviour:
   m_ObjectHideFlags: 1
