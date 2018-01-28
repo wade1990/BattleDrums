@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     public Player Player2;
 
     public AudioClip GameMusic;
+    public AudioClip TimeUpMusic;
     public AudioClip EndMusic;
 
     public GameObject EndPanel;
@@ -83,6 +84,8 @@ public class GameController : MonoBehaviour
         gameState = GameState.EndState;
         Time.timeScale = 0f;
         EndPanel.SetActive(true);
+        _audioSource.clip = TimeUpMusic;
+        _audioSource.Play();
     }
 
     /// <summary>
