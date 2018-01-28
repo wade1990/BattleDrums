@@ -2,15 +2,19 @@
 
 public class Destroyer : MonoBehaviour
 {
-    public void DestroySelf()
+    public void StartDieAnimation()
     {
         Animator[] animators = GetComponentsInChildren<Animator>();
 
-        //todo make this work
         foreach (Animator animator in animators)
         {
+            animator.SetTrigger("Dead");
             animator.SetTrigger("Disappear");
         }
+    }
+
+    public void DestroySelf()
+    {
         Destroy(gameObject);
     }
 }
