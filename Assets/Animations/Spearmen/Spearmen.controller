@@ -64,9 +64,6 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: IsWalking
-    m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: Hurt
     m_EventTreshold: 0
@@ -459,7 +456,7 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 600cd3911cce4f7479da89fd78046c9a, type: 2}
+  m_Motion: {fileID: 7400000, guid: 2a6a0722d6223d347808b54e177f07d6, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
