@@ -82,7 +82,7 @@ public class GameController : MonoBehaviour
     private void TimeUp()
     {
         gameState = GameState.EndState;
-        EndText.gameObject.SetActive(true);
+        EndText.transform.parent.gameObject.SetActive(true);
         _audioSource.clip = TimeUpMusic;
         _audioSource.Play();
     }
@@ -94,8 +94,8 @@ public class GameController : MonoBehaviour
     {
         gameState = GameState.EndState;
         EndText.fontSize = 100;
-        EndText.text = player.name + "LOST!";
-        EndText.gameObject.SetActive(true);
+        EndText.text = player.name + " lost!";
+        EndText.transform.parent.gameObject.SetActive(true);
         _audioSource.clip = EndMusic;
         _audioSource.Play();
     }
