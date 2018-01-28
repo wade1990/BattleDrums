@@ -18,7 +18,7 @@ public class AttackController : MonoBehaviour
             return;
 
         _enemiesInRange[collision] = enemy;
-        enemy.Dying.AddListener(() => Remove(collision));
+        enemy.Dying += x => Remove(collision);
 
         if (TriggerEntered != null)
             TriggerEntered.Invoke(enemy);
