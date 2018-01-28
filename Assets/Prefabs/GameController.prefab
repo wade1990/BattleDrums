@@ -108,7 +108,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f15e3b83035c644d9239005046e7eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CountDownTime: 4
+  CountDownBeats: 2
   Player1: {fileID: 0}
   Player2: {fileID: 0}
   GameMusic: {fileID: 8300000, guid: b6d594a7632e08548988745890d5f9b3, type: 3}

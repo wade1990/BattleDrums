@@ -1015,6 +1015,16 @@ Prefab:
       propertyPath: _died.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 144322409}
+    - target: {fileID: 82464643261446194, guid: 117a163902187b54e803a3ed5745c0db,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82063282617613542, guid: 117a163902187b54e803a3ed5745c0db,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 117a163902187b54e803a3ed5745c0db, type: 2}
   m_IsPrefabParent: 0
