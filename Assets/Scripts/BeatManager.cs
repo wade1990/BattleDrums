@@ -76,7 +76,6 @@ namespace Assets.Scripts
                 expected += BeatTime / 4;
                 PlayQuarterBeat();
                 yield return new WaitForSeconds(expected - Time.time);
-                Debug.Log(Time.time + "/" + expected);
             }
         }
 
