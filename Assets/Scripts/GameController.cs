@@ -6,6 +6,9 @@ public class GameController : MonoBehaviour
 {
     public float countDownTime;
 
+    public Player player1;
+    public Player player2;
+
     public AudioClip GameMusic;
     public AudioClip EndMusic;
 
@@ -27,6 +30,9 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
+
+        player1.AllUnitsDied += x => EndGame();
+        player2.AllUnitsDied += x => EndGame();
     }
 
     private void Start()
