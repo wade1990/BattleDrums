@@ -266,19 +266,15 @@ Prefab:
       propertyPath: _player
       value: 
       objectReference: {fileID: 439362772}
-    - target: {fileID: 224007127766260442, guid: 55078965bee3a974895511305e786986,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -373.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 224404957723679726, guid: 55078965bee3a974895511305e786986,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -366.27
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55078965bee3a974895511305e786986, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &434341794 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114020270451859384, guid: 55078965bee3a974895511305e786986,
+    type: 2}
+  m_PrefabInternal: {fileID: 434341793}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &439362772 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1186352892875438, guid: c73a665d2db276d4682508cc6526423a,
@@ -595,6 +591,11 @@ Prefab:
       propertyPath: Metronome
       value: 
       objectReference: {fileID: 1660443733}
+    - target: {fileID: 114049368722304384, guid: 8d08a058847772a46b888282501230ed,
+        type: 2}
+      propertyPath: EndText
+      value: 
+      objectReference: {fileID: 434341794}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d08a058847772a46b888282501230ed, type: 2}
   m_IsPrefabParent: 0
