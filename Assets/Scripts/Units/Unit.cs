@@ -5,10 +5,11 @@ using UnityEngine.Events;
 public class Unit : MonoBehaviour
 {
     [SerializeField] private UnityEvent StartedMoving;
-
+    public UnityEvent Dying;
     public Vector2 ForwardDirection;
     public float Speed;
     public float MovementDuration = 1.0f;
+
 
     private Animator[] _animators;
     private HealthController _healthController;
@@ -24,6 +25,7 @@ public class Unit : MonoBehaviour
         AttackController = GetComponentInChildren<AttackController>();
         _healthController = GetComponent<HealthController>();
 
+        _healthController.Died += x => Dying.Invoke();
         _healthController.Died += x => enabled = false;
     }
 
