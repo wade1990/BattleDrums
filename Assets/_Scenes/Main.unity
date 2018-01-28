@@ -313,6 +313,14 @@ Prefab:
       propertyPath: _player
       value: 
       objectReference: {fileID: 439362772}
+    - target: {fileID: 1263068703848970, guid: 55078965bee3a974895511305e786986, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418489775138058, guid: 55078965bee3a974895511305e786986, type: 2}
+      propertyPath: m_Name
+      value: RestartText
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55078965bee3a974895511305e786986, type: 2}
   m_IsPrefabParent: 0
@@ -972,7 +980,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d73c9b17e1a7c3b4f982e2c0753e80b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f1f769b2bb731c541963c920fcaf137e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

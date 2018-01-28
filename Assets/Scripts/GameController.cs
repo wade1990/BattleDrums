@@ -93,7 +93,6 @@ public class GameController : MonoBehaviour
     private void EndGame(Player player)
     {
         gameState = GameState.EndState;
-        Time.timeScale = 0f;
         EndText.fontSize = 100;
         EndText.text = player.name + "LOST!";
         EndText.gameObject.SetActive(true);
