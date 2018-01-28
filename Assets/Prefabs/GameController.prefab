@@ -132,8 +132,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f15e3b83035c644d9239005046e7eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countDownTime: 3
+  CountDownTime: 4
+  Player1: {fileID: 0}
+  Player2: {fileID: 0}
   GameMusic: {fileID: 8300000, guid: b6d594a7632e08548988745890d5f9b3, type: 3}
   EndMusic: {fileID: 8300000, guid: 061d730324b11d54183edc3dfad83822, type: 3}
   EndPanel: {fileID: 0}
   Metronome: {fileID: 0}
+  gameState: 0
