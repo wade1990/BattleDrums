@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -34,8 +35,8 @@ public class GameController : MonoBehaviour
     {
         _audioSource = GetComponent<AudioSource>();
 
-        Player1.AllUnitsDied += x => EndGame();
-        Player2.AllUnitsDied += x => EndGame();
+        Player1.AllUnitsDied += EndGame;
+        Player2.AllUnitsDied += EndGame;
     }
 
     private void Start()
@@ -91,10 +92,13 @@ public class GameController : MonoBehaviour
     /// <summary>
     /// Play this when an army has been defeated.
     /// </summary>
-    private void EndGame()
+    private void EndGame(Player player)
     {
         gameState = GameState.EndState;
         Time.timeScale = 0f;
+        Text endPanelText = EndPanel.GetComponentInChildren<Text>();
+        endPanelText.fontSize = 100;
+        endPanelText.text = player.name + "LOST!";
         EndPanel.SetActive(true);
         _audioSource.clip = EndMusic;
         _audioSource.Play();
