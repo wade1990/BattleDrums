@@ -20,8 +20,10 @@ public class Unit : MonoBehaviour
     protected virtual void Awake()
     {
         _animators = GetComponentsInChildren<Animator>();
-        _healthController = GetComponent<HealthController>();
         AttackController = GetComponentInChildren<AttackController>();
+        _healthController = GetComponent<HealthController>();
+
+        _healthController.Died += x => enabled = false;
     }
 
     private void Update()
@@ -66,7 +68,7 @@ public class Unit : MonoBehaviour
     }
 
     public virtual void Attack()
-    {
+    {   
         StopMoving();
         AttackController.Attack();
 

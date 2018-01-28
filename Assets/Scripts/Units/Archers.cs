@@ -54,4 +54,10 @@ public class Archers : Unit
             yield return new WaitForSeconds(_beatsPerDamage);
         }
     }
+
+    private void OnDestroy()
+    {
+        if (attackingRoutine != null)
+            StopCoroutine(attackingRoutine);
+    }
 }
