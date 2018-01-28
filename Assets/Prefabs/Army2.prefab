@@ -1660,10 +1660,6 @@ MonoBehaviour:
     Filter: 2147483647
     Pattern: ffffff7f0000000000000000ffffff7f
   - Unit: 7
-    Action: 2
-    Filter: 2147483647
-    Pattern: 00000000ffffff7f00000000ffffff7f
-  - Unit: 7
     Action: 0
     Filter: 2147483647
     Pattern: ffffff7fffffff7f0000000000000000
@@ -1813,6 +1809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6812581c6f3614c92cac0c5431651a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _name: LEFT PLAYER
   _archers: {fileID: 114645237362859254}
   _horsemen: {fileID: 114275230403690972}
   _spearmen: {fileID: 114660550351525534}
