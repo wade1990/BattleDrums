@@ -29,22 +29,19 @@ public class AttackController : MonoBehaviour
         Remove(collision);
     }
 
-    private void Remove(Collider2D collider)
+    private void Remove(Collider2D collision)
     {
-        _enemiesInRange.Remove(collider);
+        _enemiesInRange.Remove(collision);
     }
 
     public void Attack()
     {
-        foreach (Collider2D collider in _enemiesInRange.Keys)
+        foreach (Collider2D collision in _enemiesInRange.Keys)
         {
-            if (collider == null)
-            {
-                _enemiesInRange.Remove(collider);
-                return;
-            }
+            if (collision == null)
+                continue;
 
-            Unit enemy = _enemiesInRange[collider];
+            Unit enemy = _enemiesInRange[collision];
 
             enemy.ApplyDamage(_damage);
 
