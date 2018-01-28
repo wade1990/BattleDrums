@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 95029122875842900}
   - component: {fileID: 114124355445434712}
   - component: {fileID: 114563902179453692}
+  - component: {fileID: 114198704763742224}
   m_Layer: 8
   m_Name: Spearmen1
   m_TagString: Untagged
@@ -166,6 +167,7 @@ GameObject:
   - component: {fileID: 95616940246652330}
   - component: {fileID: 114423532204029290}
   - component: {fileID: 114291971447217628}
+  - component: {fileID: 114099981927110646}
   m_Layer: 8
   m_Name: Spearmen1
   m_TagString: Untagged
@@ -241,6 +243,7 @@ GameObject:
   - component: {fileID: 95989877529923418}
   - component: {fileID: 114509292052842470}
   - component: {fileID: 114605861852098860}
+  - component: {fileID: 114547420634876712}
   m_Layer: 8
   m_Name: Spearmen1
   m_TagString: Untagged
@@ -1508,7 +1511,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   ForwardDirection: {x: 1, y: 0}
-  Speed: 0.005
+  Speed: 0.012
   MovementDuration: 1
   _beatsPerDamage: 0
   _volleyDuration: 1
@@ -1594,6 +1597,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 100
   _attackedStopsMoving: 0
+--- !u!114 &114099981927110646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1247230339556502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114124355445434712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1612,6 +1626,17 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1719397557919230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114198704763742224
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1216300331284288}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
@@ -1673,7 +1698,7 @@ MonoBehaviour:
   _ouchieMade:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114080559250439566}
         m_MethodName: PlayRandomClip
         m_Mode: 1
         m_Arguments:
@@ -1702,7 +1727,7 @@ MonoBehaviour:
   _died:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114486872376713136}
         m_MethodName: StartDieAnimation
         m_Mode: 1
         m_Arguments:
@@ -1718,7 +1743,7 @@ MonoBehaviour:
   _ouchieMade:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114711070905838684}
         m_MethodName: PlayRandomClip
         m_Mode: 1
         m_Arguments:
@@ -1869,6 +1894,17 @@ MonoBehaviour:
   - {fileID: 8300000, guid: da0bf2bccada342438787910f3073730, type: 3}
   - {fileID: 8300000, guid: b25ce668dec1c904c9a692ff335d9ad7, type: 3}
   - {fileID: 8300000, guid: f7f28acbcb3b7dd45a4461d516791495, type: 3}
+--- !u!114 &114547420634876712
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1335051978992398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114563902179453692
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1966,7 +2002,7 @@ MonoBehaviour:
   _ouchieMade:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114544614202777958}
         m_MethodName: PlayRandomClip
         m_Mode: 1
         m_Arguments:
