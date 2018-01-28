@@ -35,9 +35,13 @@ public class InputHandler : MonoBehaviour, IRhythmInput
     public event Action<UnitType, ActionType> ValidInputMade;
     public event Action<Beat> BeatMade;
 
+    private GameController _gameController;
+
     // Use this for initialization
     void Start()
     {
+        _gameController = GameObject.FindObjectOfType<GameController>();
+
         BeatManager.Instance.QuarterTimeBeat.AddListener(RunBeat);
 
 
@@ -68,6 +72,8 @@ public class InputHandler : MonoBehaviour, IRhythmInput
     // Update is called once per frame
     void Update()
     {
+        if (_gameController.gameState != GameController.GameState.PlayState)
+            return;
         foreach (KeyToBeat pair in ControlScheme)
         {
             if (Input.GetKeyDown(pair.key))
@@ -89,6 +95,9 @@ public class InputHandler : MonoBehaviour, IRhythmInput
 
     public void RunBeat()
     {
+        if (_gameController.gameState != GameController.GameState.PlayState)
+            return;
+
         foreach (Rhythm rhythm in PatternList)
         {
             rhythm.Match(beats);
