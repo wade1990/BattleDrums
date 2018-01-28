@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour
     public AudioClip TimeUpMusic;
     public AudioClip EndMusic;
 
-    public GameObject EndPanel;
+    public Text EndText;
     public GameObject Metronome;
 
     private AudioSource _audioSource;
@@ -82,7 +82,7 @@ public class GameController : MonoBehaviour
     private void TimeUp()
     {
         gameState = GameState.EndState;
-        EndPanel.SetActive(true);
+        EndText.gameObject.SetActive(true);
         _audioSource.clip = TimeUpMusic;
         _audioSource.Play();
     }
@@ -93,10 +93,10 @@ public class GameController : MonoBehaviour
     private void EndGame(Player player)
     {
         gameState = GameState.EndState;
-        Text endPanelText = EndPanel.GetComponentInChildren<Text>();
-        endPanelText.fontSize = 100;
-        endPanelText.text = player.name + "LOST!";
-        EndPanel.SetActive(true);
+        Time.timeScale = 0f;
+        EndText.fontSize = 100;
+        EndText.text = player.name + "LOST!";
+        EndText.gameObject.SetActive(true);
         _audioSource.clip = EndMusic;
         _audioSource.Play();
     }
