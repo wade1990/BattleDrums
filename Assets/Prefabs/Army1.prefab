@@ -1946,25 +1946,25 @@ MonoBehaviour:
   - Unit: 7
     Action: 3
     Filter: 2147483647
-    Pattern: ffffff7f00000000ffffff7fffffff7f00000000ffffff7f00000000ffffff7f
+    Pattern: ffffff7f0000000000000000ffffff7f
   - Unit: 7
     Action: 2
     Filter: 2147483647
-    Pattern: ffffff7f000000000000000000000000ffffff7f0000000000000000ffffff7f
+    Pattern: 00000000ffffff7f00000000ffffff7f
   - Unit: 7
     Action: 0
     Filter: 2147483647
-    Pattern: ffffff7f0000000000000000000000000000000000000000ffffff7fffffff7f
+    Pattern: ffffff7fffffff7f0000000000000000
   - Unit: 7
     Action: 1
     Filter: 2147483647
-    Pattern: 0000000000000000ffffff7f00000000ffffff7f000000000000000000000000
+    Pattern: 0000000000000000ffffff7fffffff7f
   ControlScheme:
-  - key: 122
+  - key: 99
     beat: 4
   - key: 120
     beat: 2
-  - key: 99
+  - key: 122
     beat: 1
 --- !u!114 &114777190888518252
 MonoBehaviour:
