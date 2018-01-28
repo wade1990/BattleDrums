@@ -8,6 +8,7 @@ public class Destroyer : MonoBehaviour
 
         foreach (Animator animator in animators)
         {
+            animator.SetTrigger("Hurt");
             animator.SetTrigger("Dead");
             animator.SetTrigger("Disappear");
         }
