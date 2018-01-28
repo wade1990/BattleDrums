@@ -283,8 +283,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Attack:\nR . R L | . L . L\nStay:\nR . . . | L . . R\nMove Forward: \nR
-    . . . | . . R L\nMove Backward:\n. . R . | L . . . "
+  m_Text: "Attack:\nR . R L | . L . L\nMove Forward: \nR . . . | . . R L\nMove Backward:\n.
+    . R . | L . . . "
 --- !u!114 &114593710882390270
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -344,8 +344,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Attack:\nR . R L | . L . L\nStay:\nR . . . | L . . R\nMove Forward: \nR
-    . . . | . . R L\nMove Backward:\n. . R . | L . . . "
+  m_Text: "Attack:\nR . R L | . L . L\nMove Forward: \nR . . . | . . R L\nMove Backward:\n.
+    . R . | L . . . "
 --- !u!114 &114860413534134648
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -490,7 +490,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.273, y: 0}
+  m_AnchoredPosition: {x: 20.001068, y: -20.999908}
   m_SizeDelta: {x: 424.05, y: 416}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224404957723679726
@@ -546,7 +546,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.273, y: 0}
+  m_AnchoredPosition: {x: 20, y: -21}
   m_SizeDelta: {x: 424.05, y: 416}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224921443348826490
