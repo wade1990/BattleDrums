@@ -144,6 +144,7 @@ GameObject:
   - component: {fileID: 95029122875842900}
   - component: {fileID: 114124355445434712}
   - component: {fileID: 114777190888518252}
+  - component: {fileID: 114946523548126026}
   m_Layer: 8
   m_Name: Spearmen1
   m_TagString: Untagged
@@ -163,6 +164,7 @@ GameObject:
   - component: {fileID: 95616940246652330}
   - component: {fileID: 114423532204029290}
   - component: {fileID: 114545151716831122}
+  - component: {fileID: 114247237409625268}
   m_Layer: 8
   m_Name: Spearmen1
   m_TagString: Untagged
@@ -238,6 +240,7 @@ GameObject:
   - component: {fileID: 95989877529923418}
   - component: {fileID: 114509292052842470}
   - component: {fileID: 114960108993392944}
+  - component: {fileID: 114114776061980162}
   m_Layer: 8
   m_Name: Spearmen1
   m_TagString: Untagged
@@ -1519,6 +1522,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 100
+  _attackedStopsMoving: 0
+--- !u!114 &114114776061980162
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1335051978992398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114124355445434712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1543,6 +1558,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 100
+  _attackedStopsMoving: 1
+--- !u!114 &114247237409625268
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1247230339556502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114292347115678066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1768,6 +1795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 100
+  _attackedStopsMoving: 1
 --- !u!114 &114615876817558444
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1978,6 +2006,17 @@ MonoBehaviour:
     - {fileID: 8300000, guid: ac26fbbb46019b741ad644b129836afe, type: 3}
     - {fileID: 8300000, guid: 38c55eea2e93c1540b30b91027385be4, type: 3}
     _source: {fileID: 82796304965143968}
+--- !u!114 &114946523548126026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1216300331284288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114960108993392944
 MonoBehaviour:
   m_ObjectHideFlags: 1

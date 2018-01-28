@@ -5,6 +5,7 @@ using UnityEngine;
 public class AttackController : MonoBehaviour
 {
     [SerializeField] private float _damage;
+    [SerializeField] private bool _attackedStopsMoving = true;
 
     private readonly Dictionary<Collider2D, Unit> _enemiesInRange = new Dictionary<Collider2D, Unit>();
 
@@ -30,6 +31,11 @@ public class AttackController : MonoBehaviour
     public void Attack()
     {
         foreach (Unit enemy in _enemiesInRange.Values)
+        {
             enemy.ApplyDamage(_damage);
+
+            if(_attackedStopsMoving)
+                enemy.StopMoving();
+        }
     }
 }
