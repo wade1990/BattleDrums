@@ -61,16 +61,21 @@ namespace Assets.Scripts
         /// <returns></returns>
         private IEnumerator OpDaBeat()
         {
+            float expected = Time.time;
             while (true)
             {
+                expected += BeatTime / 4;
                 PlayBeat();
-                yield return new WaitForSeconds(BeatTime / 4);
+                yield return new WaitForSeconds(expected-Time.time);
+                expected += BeatTime / 4;
                 PlayQuarterBeat();
-                yield return new WaitForSeconds(BeatTime / 4);
+                yield return new WaitForSeconds(expected - Time.time);
+                expected += BeatTime / 4;
                 PlayHalfBeat();
-                yield return new WaitForSeconds(BeatTime / 4);
+                yield return new WaitForSeconds(expected - Time.time);
+                expected += BeatTime / 4;
                 PlayQuarterBeat();
-                yield return new WaitForSeconds(BeatTime / 4);
+                yield return new WaitForSeconds(expected - Time.time);
             }
         }
 
