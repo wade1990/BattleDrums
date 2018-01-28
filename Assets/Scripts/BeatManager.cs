@@ -64,17 +64,17 @@ namespace Assets.Scripts
             float expected = Time.time;
             while (true)
             {
-                expected += BeatTime / 4;
                 PlayBeat();
+                expected += BeatTime / 4;
                 yield return new WaitForSeconds(expected-Time.time);
-                expected += BeatTime / 4;
                 PlayQuarterBeat();
-                yield return new WaitForSeconds(expected - Time.time);
                 expected += BeatTime / 4;
+                yield return new WaitForSeconds(expected - Time.time);
                 PlayHalfBeat();
-                yield return new WaitForSeconds(expected - Time.time);
                 expected += BeatTime / 4;
+                yield return new WaitForSeconds(expected - Time.time);
                 PlayQuarterBeat();
+                expected += BeatTime / 4;
                 yield return new WaitForSeconds(expected - Time.time);
             }
         }
