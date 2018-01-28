@@ -30,7 +30,7 @@ public class Karaoke : MonoBehaviour {
     public Color passed = new Color(0f,0f,0f,.5f);
     public Color toDo = new Color(0f, 1f, 0f, 1f);
     public Color failed = new Color(1f, 0.1f, 0.1f, .9f);
-    public ActionTitle[] Titles = { new ActionTitle(ActionType.MoveForwards, "Move Forward:"), new ActionTitle(ActionType.MoveBackwards, "Move Backwards:"),  new ActionTitle(ActionType.Stay, "Hold:"), new ActionTitle(ActionType.Action, "Attack:") };
+    public ActionTitle[] Titles = { new ActionTitle(ActionType.MoveForwards, "Move Forwards:"), new ActionTitle(ActionType.MoveBackwards, "Move Backwards:"),  new ActionTitle(ActionType.Stay, "Hold:"), new ActionTitle(ActionType.Action, "Attack:") };
     public BeatSymbol[] Symbols = { new BeatSymbol(Beat.All, "▇"), new BeatSymbol(Beat.None, "▂") };
     
     [SerializeField] GameObject _player;
