@@ -4,10 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    public float countDownTime;
+    public float CountDownTime;
 
-    public Player player1;
-    public Player player2;
+    public Player Player1;
+    public Player Player2;
 
     public AudioClip GameMusic;
     public AudioClip EndMusic;
@@ -25,14 +25,14 @@ public class GameController : MonoBehaviour
         StartState,
         PlayState,
         EndState
-    };
+    }
 
     private void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
 
-        player1.AllUnitsDied += x => EndGame();
-        player2.AllUnitsDied += x => EndGame();
+        Player1.AllUnitsDied += x => EndGame();
+        Player2.AllUnitsDied += x => EndGame();
     }
 
     private void Start()
@@ -70,7 +70,7 @@ public class GameController : MonoBehaviour
     IEnumerator StartCountDown()
     {
         gameState = GameState.CountDownState;
-        yield return new WaitForSeconds(countDownTime);
+        yield return new WaitForSeconds(CountDownTime);
         Destroy(Metronome.gameObject);
         gameState = GameState.StartState;
     }
