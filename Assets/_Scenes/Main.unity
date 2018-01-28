@@ -727,7 +727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e775d3f9f8279945a93287f7ee330be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _beatsPerMinute: 60
+  _beatsPerMinute: 90
   _startupDelay: 0
   Beat:
     m_PersistentCalls:
