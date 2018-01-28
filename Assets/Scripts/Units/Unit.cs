@@ -35,7 +35,10 @@ public class Unit : MonoBehaviour
 
             enabled = false;
         };
+    }
 
+    protected virtual void Start()
+    {
         StopMoving();
     }
 

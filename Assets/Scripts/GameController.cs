@@ -42,7 +42,6 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         gameState = GameState.StartCountDownState;
-        Time.timeScale = 1.0f;
     }
 
     private void Update()
@@ -83,7 +82,6 @@ public class GameController : MonoBehaviour
     private void TimeUp()
     {
         gameState = GameState.EndState;
-        Time.timeScale = 0f;
         EndText.gameObject.SetActive(true);
         _audioSource.clip = TimeUpMusic;
         _audioSource.Play();
