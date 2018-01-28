@@ -79,9 +79,7 @@ public class Unit : MonoBehaviour
     public virtual void ApplyDamage(float damage)
     {
         foreach (Animator animator in _animators)
-        {
             animator.SetTrigger("Hurt");
-        }
 
         _healthController.Health -= damage;
     }
