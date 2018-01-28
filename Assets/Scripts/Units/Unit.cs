@@ -35,6 +35,8 @@ public class Unit : MonoBehaviour
 
             enabled = false;
         };
+
+        StopMoving();
     }
 
     private void Update()
