@@ -42,7 +42,6 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         gameState = GameState.StartCountDownState;
-        Time.timeScale = 1.0f;
     }
 
     private void Update()
@@ -83,7 +82,6 @@ public class GameController : MonoBehaviour
     private void TimeUp()
     {
         gameState = GameState.EndState;
-        Time.timeScale = 0f;
         EndPanel.SetActive(true);
         _audioSource.clip = TimeUpMusic;
         _audioSource.Play();
@@ -95,7 +93,6 @@ public class GameController : MonoBehaviour
     private void EndGame(Player player)
     {
         gameState = GameState.EndState;
-        Time.timeScale = 0f;
         Text endPanelText = EndPanel.GetComponentInChildren<Text>();
         endPanelText.fontSize = 100;
         endPanelText.text = player.name + "LOST!";
