@@ -173,10 +173,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4180996069390308, guid: fa511d133de1da54f87020143d7ea4d1, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 11.037479
-      objectReference: {fileID: 0}
     - target: {fileID: 1903721951410334, guid: fa511d133de1da54f87020143d7ea4d1, type: 2}
       propertyPath: m_Name
       value: Bound (1)
@@ -756,6 +752,31 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4180996069390308, guid: fa511d133de1da54f87020143d7ea4d1, type: 2}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50057190869938482, guid: fa511d133de1da54f87020143d7ea4d1,
+        type: 2}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50057190869938482, guid: fa511d133de1da54f87020143d7ea4d1,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 50057190869938482, guid: fa511d133de1da54f87020143d7ea4d1,
+        type: 2}
+      propertyPath: m_Mass
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 50057190869938482, guid: fa511d133de1da54f87020143d7ea4d1,
+        type: 2}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50057190869938482, guid: fa511d133de1da54f87020143d7ea4d1,
+        type: 2}
+      propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
