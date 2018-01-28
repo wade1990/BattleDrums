@@ -5,6 +5,7 @@ using UnityEngine;
 public class Archers : Unit
 {
     [SerializeField] private float _beatsPerDamage;
+    [SerializeField] private float _volleyDuration;
 
     private ArrowSpawner _arrowSpawner;
 
@@ -48,10 +49,14 @@ public class Archers : Unit
 
     private IEnumerator AttackRoutine()
     {
-        while (true)
+        float elapsedTime = 0;
+
+        while (elapsedTime < _volleyDuration)
         {
             base.Attack();
+
             yield return new WaitForSeconds(_beatsPerDamage);
+            elapsedTime += _beatsPerDamage;
         }
     }
 

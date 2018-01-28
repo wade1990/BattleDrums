@@ -8,6 +8,7 @@ public class Unit : MonoBehaviour
 
     public Vector2 ForwardDirection;
     public float Speed;
+    public float MovementDuration = 1.0f;
 
     private Animator[] _animators;
     private HealthController _healthController;
@@ -48,6 +49,8 @@ public class Unit : MonoBehaviour
     {
         StartedMoving.Invoke();
         _isMoving = true;
+
+        Invoke("StopMoving", MovementDuration);
 
         foreach (Animator animator in _animators)
         {
