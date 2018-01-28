@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    public float CountDownTime;
+    public int CountDownBeats;
+    private int _count;
 
     public Player Player1;
     public Player Player2;
@@ -49,11 +51,15 @@ public class GameController : MonoBehaviour
         switch (gameState)
         {
             case GameState.StartCountDownState:
-                StartCoroutine(StartCountDown());
+                gameState = GameState.CountDownState;
+                BeatManager.Instance.Beat.AddListener(count);
                 break;
             case GameState.CountDownState:
+                if (_count >= CountDownBeats)
+                    gameState = GameState.StartState;
                 break;
             case GameState.StartState:
+                Destroy(Metronome.gameObject);
                 _audioSource.clip = GameMusic;
                 _audioSource.Play();
                 gameState = GameState.PlayState;
@@ -67,12 +73,9 @@ public class GameController : MonoBehaviour
         }
     }
 
-    IEnumerator StartCountDown()
+    private void count()
     {
-        gameState = GameState.CountDownState;
-        yield return new WaitForSeconds(CountDownTime);
-        Destroy(Metronome.gameObject);
-        gameState = GameState.StartState;
+        _count++;
     }
 
     private void TimeUp()
