@@ -1,10 +1,21 @@
-﻿using Assets.Scripts;
+﻿using System;
+using System.Linq;
+using Assets.Scripts;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Animator))]
 public class AnimationBPMSync : MonoBehaviour
 {
-    [SerializeField] private float _baseBPM = 60f;
+    [SerializeField] private StartingBeat startingBeat;
+    [SerializeField] private bool _adjustSpeed = true;
+
+    private enum StartingBeat
+    {
+        Beat,
+        HalfTime,
+        QuarterTime
+    }
 
     private Animator _animator;
 
@@ -16,14 +27,35 @@ public class AnimationBPMSync : MonoBehaviour
 
     private void Start()
     {
-        BeatManager beatManager = BeatManager.Instance;
-        _animator.speed = beatManager.BPM / _baseBPM;
-        beatManager.Beat.AddListener(StartPulse);
+        if (_adjustSpeed)
+        {
+            BeatManager beatManager = BeatManager.Instance;
+            AnimationClip clip = _animator.runtimeAnimatorController.animationClips.First();
+            float speed = beatManager.BPM / (60f / clip.length);
+            _animator.speed = speed;
+        }
+        
+        GetStartingBeat().AddListener(StartAnimation);
     }
 
-    private void StartPulse()
+    private UnityEvent GetStartingBeat()
     {
-        BeatManager.Instance.Beat.RemoveListener(StartPulse);
+        switch (startingBeat)
+        {
+            case StartingBeat.Beat:
+                return BeatManager.Instance.Beat;
+            case StartingBeat.HalfTime:
+                return BeatManager.Instance.HalfTimeBeat;
+            case StartingBeat.QuarterTime:
+                return BeatManager.Instance.QuarterTimeBeat;
+        }
+
+        throw new ArgumentOutOfRangeException();
+    }
+
+    private void StartAnimation()
+    {
+        GetStartingBeat().RemoveListener(StartAnimation);
         _animator.enabled = true;
     }
 }
