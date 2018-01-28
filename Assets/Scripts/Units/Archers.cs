@@ -23,6 +23,7 @@ public class Archers : Unit
         _arrowSpawner.StartShooting();
 
         StartCoroutine(attackingRoutine);
+        Invoke("StopAttacking", _volleyDuration);
     }
 
     public override void MoveBackWards()
@@ -49,14 +50,10 @@ public class Archers : Unit
 
     private IEnumerator AttackRoutine()
     {
-        float elapsedTime = 0;
-
-        while (elapsedTime < _volleyDuration)
+        while (true)
         {
             base.Attack();
-
             yield return new WaitForSeconds(_beatsPerDamage);
-            elapsedTime += _beatsPerDamage;
         }
     }
 
