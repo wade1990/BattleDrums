@@ -1,13 +1,16 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(HealthController))]
 public class Unit : MonoBehaviour
 {
     [SerializeField] private UnityEvent StartedMoving;
-
     public Vector2 ForwardDirection;
     public float Speed;
+    public float MovementDuration = 1.0f;
+
+    public event Action<Unit> Dying;
 
     private Animator[] _animators;
     private HealthController _healthController;
@@ -17,11 +20,21 @@ public class Unit : MonoBehaviour
 
     private bool _isMoving;
 
+    public bool Alive { get { return _healthController.Alive; } }
+
     protected virtual void Awake()
     {
         _animators = GetComponentsInChildren<Animator>();
-        _healthController = GetComponent<HealthController>();
         AttackController = GetComponentInChildren<AttackController>();
+        _healthController = GetComponent<HealthController>();
+
+        _healthController.Died += x =>
+        {
+            if (Dying != null)
+                Dying.Invoke(this);
+
+            enabled = false;
+        };
     }
 
     private void Update()
@@ -46,6 +59,8 @@ public class Unit : MonoBehaviour
     {
         StartedMoving.Invoke();
         _isMoving = true;
+
+        Invoke("StopMoving", MovementDuration);
 
         foreach (Animator animator in _animators)
         {
@@ -79,9 +94,7 @@ public class Unit : MonoBehaviour
     public virtual void ApplyDamage(float damage)
     {
         foreach (Animator animator in _animators)
-        {
             animator.SetTrigger("Hurt");
-        }
 
         _healthController.Health -= damage;
     }

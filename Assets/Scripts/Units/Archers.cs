@@ -5,6 +5,7 @@ using UnityEngine;
 public class Archers : Unit
 {
     [SerializeField] private float _beatsPerDamage;
+    [SerializeField] private float _volleyDuration;
 
     private ArrowSpawner _arrowSpawner;
 
@@ -22,6 +23,7 @@ public class Archers : Unit
         _arrowSpawner.StartShooting();
 
         StartCoroutine(attackingRoutine);
+        Invoke("StopAttacking", _volleyDuration);
     }
 
     public override void MoveBackWards()
@@ -53,5 +55,11 @@ public class Archers : Unit
             base.Attack();
             yield return new WaitForSeconds(_beatsPerDamage);
         }
+    }
+
+    private void OnDestroy()
+    {
+        if (attackingRoutine != null)
+            StopCoroutine(attackingRoutine);
     }
 }

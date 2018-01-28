@@ -20,6 +20,8 @@ internal class ArrowController : MonoBehaviour
     public IEnumerator MoveRoutine(Vector2 targetPosition)
     {
         Vector2 startPosition = transform.position;
+
+        int dxModifier = targetPosition.x - startPosition.x < 0 ? -1 : 1;
         float distance = Vector2.Distance(startPosition, targetPosition) / 2;
 
         float duration = distance * 2 / _speed;
@@ -30,7 +32,7 @@ internal class ArrowController : MonoBehaviour
         {
             float f = Mathf.PI * elapsedTime  / duration - Mathf.PI / 2f;
 
-            float dx = Mathf.Sin(f) * distance + distance;
+            float dx = (Mathf.Sin(f) * distance + distance) * dxModifier;
             float dy = Mathf.Cos(f) * distance;
 
             Vector2 newPosition = startPosition + new Vector2(dx, dy);

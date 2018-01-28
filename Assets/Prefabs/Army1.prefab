@@ -144,6 +144,8 @@ GameObject:
   - component: {fileID: 95029122875842900}
   - component: {fileID: 114124355445434712}
   - component: {fileID: 114777190888518252}
+  - component: {fileID: 114946523548126026}
+  - component: {fileID: 114026615603518824}
   m_Layer: 8
   m_Name: Spearmen1
   m_TagString: Untagged
@@ -163,6 +165,8 @@ GameObject:
   - component: {fileID: 95616940246652330}
   - component: {fileID: 114423532204029290}
   - component: {fileID: 114545151716831122}
+  - component: {fileID: 114247237409625268}
+  - component: {fileID: 114448122355556436}
   m_Layer: 8
   m_Name: Spearmen1
   m_TagString: Untagged
@@ -238,6 +242,8 @@ GameObject:
   - component: {fileID: 95989877529923418}
   - component: {fileID: 114509292052842470}
   - component: {fileID: 114960108993392944}
+  - component: {fileID: 114114776061980162}
+  - component: {fileID: 114539503366702762}
   m_Layer: 8
   m_Name: Spearmen1
   m_TagString: Untagged
@@ -1448,8 +1454,21 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   ForwardDirection: {x: 1, y: 0}
-  Speed: 0.005
+  Speed: 0.012
+  MovementDuration: 1
   _beatsPerDamage: 0
+  _volleyDuration: 1
+--- !u!114 &114026615603518824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1216300331284288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114049299418477008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1519,6 +1538,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 100
+  _attackedStopsMoving: 0
+--- !u!114 &114114776061980162
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1335051978992398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114124355445434712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1543,6 +1574,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 100
+  _attackedStopsMoving: 1
+--- !u!114 &114247237409625268
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1247230339556502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114292347115678066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1677,6 +1720,7 @@ MonoBehaviour:
       PublicKeyToken=null
   ForwardDirection: {x: 1, y: 0}
   Speed: 0.01
+  MovementDuration: 1
   _defense: 100
   _holdingDamage: 100
   _movementDelay: 0
@@ -1696,6 +1740,17 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+--- !u!114 &114448122355556436
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1247230339556502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114486872376713136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1725,6 +1780,17 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1267678297523208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114539503366702762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1335051978992398}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
@@ -1768,6 +1834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 100
+  _attackedStopsMoving: 1
 --- !u!114 &114615876817558444
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1797,6 +1864,7 @@ MonoBehaviour:
       PublicKeyToken=null
   ForwardDirection: {x: 1, y: 0}
   Speed: 0.02
+  MovementDuration: 1
 --- !u!114 &114649612750205472
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1918,25 +1986,25 @@ MonoBehaviour:
   - Unit: 7
     Action: 3
     Filter: 2147483647
-    Pattern: ffffff7f00000000ffffff7fffffff7f00000000ffffff7f00000000ffffff7f
+    Pattern: ffffff7f0000000000000000ffffff7f
   - Unit: 7
     Action: 2
     Filter: 2147483647
-    Pattern: ffffff7f000000000000000000000000ffffff7f0000000000000000ffffff7f
+    Pattern: 00000000ffffff7f00000000ffffff7f
   - Unit: 7
     Action: 0
     Filter: 2147483647
-    Pattern: ffffff7f0000000000000000000000000000000000000000ffffff7fffffff7f
+    Pattern: ffffff7fffffff7f0000000000000000
   - Unit: 7
     Action: 1
     Filter: 2147483647
-    Pattern: 0000000000000000ffffff7f00000000ffffff7f000000000000000000000000
+    Pattern: 0000000000000000ffffff7fffffff7f
   ControlScheme:
-  - key: 122
+  - key: 99
     beat: 4
   - key: 120
     beat: 2
-  - key: 99
+  - key: 122
     beat: 1
 --- !u!114 &114777190888518252
 MonoBehaviour:
@@ -1978,6 +2046,17 @@ MonoBehaviour:
     - {fileID: 8300000, guid: ac26fbbb46019b741ad644b129836afe, type: 3}
     - {fileID: 8300000, guid: 38c55eea2e93c1540b30b91027385be4, type: 3}
     _source: {fileID: 82796304965143968}
+--- !u!114 &114946523548126026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1216300331284288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114960108993392944
 MonoBehaviour:
   m_ObjectHideFlags: 1
