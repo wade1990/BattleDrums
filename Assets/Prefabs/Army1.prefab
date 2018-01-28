@@ -143,6 +143,7 @@ GameObject:
   - component: {fileID: 212762868018628816}
   - component: {fileID: 95029122875842900}
   - component: {fileID: 114124355445434712}
+  - component: {fileID: 114777190888518252}
   m_Layer: 8
   m_Name: Spearmen1
   m_TagString: Untagged
@@ -161,6 +162,7 @@ GameObject:
   - component: {fileID: 212635278403499948}
   - component: {fileID: 95616940246652330}
   - component: {fileID: 114423532204029290}
+  - component: {fileID: 114545151716831122}
   m_Layer: 8
   m_Name: Spearmen1
   m_TagString: Untagged
@@ -235,6 +237,7 @@ GameObject:
   - component: {fileID: 212066973660333078}
   - component: {fileID: 95989877529923418}
   - component: {fileID: 114509292052842470}
+  - component: {fileID: 114960108993392944}
   m_Layer: 8
   m_Name: Spearmen1
   m_TagString: Untagged
@@ -1018,7 +1021,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1042,7 +1045,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!82 &82567104254940098
 AudioSource:
   m_ObjectHideFlags: 1
@@ -1178,7 +1181,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1202,7 +1205,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!82 &82720320540511742
 AudioSource:
   m_ObjectHideFlags: 1
@@ -1445,7 +1448,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   ForwardDirection: {x: 1, y: 0}
-  Speed: 0.015
+  Speed: 0.005
   _beatsPerDamage: 0
 --- !u!114 &114049299418477008
 MonoBehaviour:
@@ -1556,8 +1559,8 @@ MonoBehaviour:
   _died:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114536845478404588}
-        m_MethodName: DestroySelf
+      - m_Target: {fileID: 0}
+        m_MethodName: StartDieAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1673,7 +1676,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   ForwardDirection: {x: 1, y: 0}
-  Speed: 0.02
+  Speed: 0.01
   _defense: 100
   _holdingDamage: 100
   _movementDelay: 0
@@ -1742,6 +1745,17 @@ MonoBehaviour:
   - {fileID: 8300000, guid: da0bf2bccada342438787910f3073730, type: 3}
   - {fileID: 8300000, guid: b25ce668dec1c904c9a692ff335d9ad7, type: 3}
   - {fileID: 8300000, guid: f7f28acbcb3b7dd45a4461d516791495, type: 3}
+--- !u!114 &114545151716831122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1247230339556502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114571616424219408
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1782,7 +1796,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   ForwardDirection: {x: 1, y: 0}
-  Speed: 0.025
+  Speed: 0.02
 --- !u!114 &114649612750205472
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1924,6 +1938,17 @@ MonoBehaviour:
     beat: 2
   - key: 99
     beat: 1
+--- !u!114 &114777190888518252
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1216300331284288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114855723765092148
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1953,6 +1978,17 @@ MonoBehaviour:
     - {fileID: 8300000, guid: ac26fbbb46019b741ad644b129836afe, type: 3}
     - {fileID: 8300000, guid: 38c55eea2e93c1540b30b91027385be4, type: 3}
     _source: {fileID: 82796304965143968}
+--- !u!114 &114960108993392944
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1335051978992398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212066973660333078
 SpriteRenderer:
   m_ObjectHideFlags: 1

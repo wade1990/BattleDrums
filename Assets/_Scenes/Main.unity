@@ -557,6 +557,21 @@ Prefab:
       propertyPath: _died.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartDieAnimation
       objectReference: {fileID: 0}
+    - target: {fileID: 114007508808706150, guid: 117a163902187b54e803a3ed5745c0db,
+        type: 2}
+      propertyPath: Speed
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 114437674635082434, guid: 117a163902187b54e803a3ed5745c0db,
+        type: 2}
+      propertyPath: Speed
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 114615876817558444, guid: 117a163902187b54e803a3ed5745c0db,
+        type: 2}
+      propertyPath: Speed
+      value: 0.02
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 117a163902187b54e803a3ed5745c0db, type: 2}
   m_IsPrefabParent: 0
@@ -1018,6 +1033,41 @@ Prefab:
         type: 2}
       propertyPath: _died.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartDieAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 82183881893458490, guid: c73a665d2db276d4682508cc6526423a,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82183881893458490, guid: c73a665d2db276d4682508cc6526423a,
+        type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114645237362859254, guid: c73a665d2db276d4682508cc6526423a,
+        type: 2}
+      propertyPath: Speed
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 82129091295267018, guid: c73a665d2db276d4682508cc6526423a,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82129091295267018, guid: c73a665d2db276d4682508cc6526423a,
+        type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114275230403690972, guid: c73a665d2db276d4682508cc6526423a,
+        type: 2}
+      propertyPath: Speed
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660550351525534, guid: c73a665d2db276d4682508cc6526423a,
+        type: 2}
+      propertyPath: Speed
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c73a665d2db276d4682508cc6526423a, type: 2}
