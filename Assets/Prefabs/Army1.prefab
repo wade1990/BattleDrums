@@ -1601,11 +1601,11 @@ MonoBehaviour:
     type: 2}
   _targetArea: {fileID: 61446494687981366}
   _spawnInterval: 0.3
-  _spawnCount: 1
+  _spawnCount: 3
   _arrowsSpawned:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114711070905838684}
         m_MethodName: PlayRandomClip
         m_Mode: 1
         m_Arguments:
@@ -1695,7 +1695,7 @@ MonoBehaviour:
   _died:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114536845478404588}
         m_MethodName: StartDieAnimation
         m_Mode: 1
         m_Arguments:
@@ -1740,7 +1740,7 @@ MonoBehaviour:
   _died:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114486872376713136}
         m_MethodName: StartDieAnimation
         m_Mode: 1
         m_Arguments:
@@ -1854,7 +1854,7 @@ MonoBehaviour:
   _startedHolding:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114080559250439566}
         m_MethodName: PlayRandomClip
         m_Mode: 1
         m_Arguments:

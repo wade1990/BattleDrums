@@ -108,18 +108,6 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &144322409 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114673227105177544, guid: c73a665d2db276d4682508cc6526423a,
-    type: 2}
-  m_PrefabInternal: {fileID: 560033692}
-  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
---- !u!114 &341091015 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114192022218122842, guid: c73a665d2db276d4682508cc6526423a,
-    type: 2}
-  m_PrefabInternal: {fileID: 560033692}
-  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
 --- !u!1001 &350027605
 Prefab:
   m_ObjectHideFlags: 0
@@ -1001,20 +989,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114292347115678066, guid: 117a163902187b54e803a3ed5745c0db,
-        type: 2}
-      propertyPath: _died.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 341091015}
     - target: {fileID: 1812749556466786, guid: 117a163902187b54e803a3ed5745c0db, type: 2}
       propertyPath: m_Name
       value: Units1
       objectReference: {fileID: 0}
-    - target: {fileID: 114345269830803074, guid: 117a163902187b54e803a3ed5745c0db,
-        type: 2}
-      propertyPath: _died.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 144322409}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 117a163902187b54e803a3ed5745c0db, type: 2}
   m_IsPrefabParent: 0
