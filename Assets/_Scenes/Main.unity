@@ -108,26 +108,6 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &327742814 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1731941181242646, guid: 55078965bee3a974895511305e786986,
-    type: 2}
-  m_PrefabInternal: {fileID: 434341793}
---- !u!114 &327742818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 327742814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d3599b25b1560c47beb978431571a66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  passed: {r: 0, g: 0, b: 0, a: 0.5}
-  toDo: {r: 0, g: 1, b: 0, a: 1}
-  failed: {r: 1, g: 0.1, b: 0.1, a: 0.9}
-  _player: {fileID: 750624345}
 --- !u!114 &341091015 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114192022218122842, guid: c73a665d2db276d4682508cc6526423a,
@@ -314,11 +294,16 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224567709668577628, guid: 55078965bee3a974895511305e786986,
+    - target: {fileID: 114860413534134648, guid: 55078965bee3a974895511305e786986,
         type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 750624345}
+    - target: {fileID: 114232717385523902, guid: 55078965bee3a974895511305e786986,
+        type: 2}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 439362772}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55078965bee3a974895511305e786986, type: 2}
   m_IsPrefabParent: 0
@@ -681,6 +666,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114049368722304384, guid: 8d08a058847772a46b888282501230ed,
+        type: 2}
+      propertyPath: EndPanel
+      value: 
+      objectReference: {fileID: 1632439217}
+    - target: {fileID: 114049368722304384, guid: 8d08a058847772a46b888282501230ed,
+        type: 2}
+      propertyPath: Metronome
+      value: 
+      objectReference: {fileID: 1660443733}
+    - target: {fileID: 114049368722304384, guid: 8d08a058847772a46b888282501230ed,
+        type: 2}
+      propertyPath: countDownTime
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d08a058847772a46b888282501230ed, type: 2}
   m_IsPrefabParent: 0
@@ -844,26 +844,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4180996069390308, guid: fa511d133de1da54f87020143d7ea4d1,
     type: 2}
   m_PrefabInternal: {fileID: 1306746423}
---- !u!1 &1323683763 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1826021107771416, guid: 55078965bee3a974895511305e786986,
-    type: 2}
-  m_PrefabInternal: {fileID: 434341793}
---- !u!114 &1323683767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1323683763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d3599b25b1560c47beb978431571a66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  passed: {r: 0, g: 0, b: 0, a: 0.5}
-  toDo: {r: 0, g: 1, b: 0, a: 1}
-  failed: {r: 1, g: 0.1, b: 0.1, a: 0.9}
-  _player: {fileID: 439362772}
 --- !u!1001 &1345190564
 Prefab:
   m_ObjectHideFlags: 0
@@ -1144,6 +1124,16 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c73a665d2db276d4682508cc6526423a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1632439217 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1263068703848970, guid: 55078965bee3a974895511305e786986,
+    type: 2}
+  m_PrefabInternal: {fileID: 434341793}
+--- !u!1 &1660443733 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1041615202922916, guid: 7a0747c25e9cf5840aa0c0ea93cea844,
+    type: 2}
+  m_PrefabInternal: {fileID: 1345190564}
 --- !u!1 &1740783485 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1683810857068900, guid: c73a665d2db276d4682508cc6526423a,
