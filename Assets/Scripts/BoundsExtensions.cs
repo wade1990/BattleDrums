@@ -12,4 +12,10 @@ internal static class BoundsExtensions
 
         return new Vector2(x, y);
     }
+
+    public static void PlayClip(this AudioSource source, AudioClip clip)
+    {
+        source.clip = clip;
+        source.Play();
+    }
 }
