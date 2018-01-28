@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Archers _archers;
     [SerializeField] private Horsemen _horsemen;
     [SerializeField] private Spearmen _spearmen;
-    
+
     private IRhythmInput _rhythmInput;
 
     private List<Unit> _aliveUnits;
@@ -24,7 +24,9 @@ public class Player : MonoBehaviour
         _rhythmInput = GetComponent<IRhythmInput>();
         _rhythmInput.ValidInputMade += PerformAction;
 
-        foreach (Unit unit in new Unit[] {_archers, _horsemen, _spearmen})
+        _aliveUnits = new List<Unit> { _archers, _horsemen, _spearmen };
+
+        foreach (Unit unit in _aliveUnits)
             unit.Dying += OnUnitDied;
     }
 
@@ -35,7 +37,7 @@ public class Player : MonoBehaviour
         switch (actionType)
         {
             case ActionType.MoveForwards:
-                foreach(Unit unit in units)
+                foreach (Unit unit in units)
                     unit.MoveForward();
                 break;
             case ActionType.MoveBackwards:
@@ -57,20 +59,20 @@ public class Player : MonoBehaviour
     {
         List<Unit> units = new List<Unit>();
 
-        if((unitType & UnitType.Archers) == UnitType.Archers)
-                units.Add(_archers);
+        if ((unitType & UnitType.Archers) == UnitType.Archers)
+            units.Add(_archers);
         if ((unitType & UnitType.Horsemen) == UnitType.Horsemen)
-                units.Add( _horsemen);
+            units.Add(_horsemen);
         if ((unitType & UnitType.Spearmen) == UnitType.Spearmen)
             units.Add(_spearmen);
 
         return units.Where(unit => unit.Alive).ToList();
     }
-    
+
     private void OnUnitDied(Unit unit)
     {
         _aliveUnits.Remove(unit);
-        if(!_aliveUnits.Any() && AllUnitsDied != null)
+        if (!_aliveUnits.Any() && AllUnitsDied != null)
             AllUnitsDied.Invoke(this);
     }
 }
