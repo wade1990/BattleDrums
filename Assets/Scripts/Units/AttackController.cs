@@ -11,6 +11,8 @@ public class AttackController : MonoBehaviour
 
     public event Action<Unit> TriggerEntered;
 
+    private readonly List<Collider2D> _removeQueue = new List<Collider2D>();
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Unit enemy = collision.GetComponent<Unit>();
@@ -31,7 +33,7 @@ public class AttackController : MonoBehaviour
 
     private void Remove(Collider2D collision)
     {
-        _enemiesInRange.Remove(collision);
+        _removeQueue.Add(collision);
     }
 
     public void Attack()
@@ -48,5 +50,13 @@ public class AttackController : MonoBehaviour
             if (_attackedStopsMoving)
                 enemy.StopMoving();
         }
+    }
+
+    private void LateUpdate()
+    {
+        foreach (Collider2D collision in _removeQueue)
+            _enemiesInRange.Remove(collision);
+
+        _removeQueue.Clear();
     }
 }
