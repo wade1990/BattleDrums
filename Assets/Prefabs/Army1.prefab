@@ -1848,7 +1848,7 @@ MonoBehaviour:
   ForwardDirection: {x: 1, y: 0}
   Speed: 0.01
   MovementDuration: 1
-  _defense: 100
+  _defense: 0
   _holdingDamage: 100
   _movementDelay: 0
   _startedHolding:
