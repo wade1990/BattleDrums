@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 224107666824084164}
   - component: {fileID: 222496964888710348}
   - component: {fileID: 114271021432848262}
-  - component: {fileID: 114518911329420766}
+  - component: {fileID: 114860413534134648}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 224567709668577628}
   - component: {fileID: 222858077016765594}
   - component: {fileID: 114732899120568468}
-  - component: {fileID: 114649567366222078}
+  - component: {fileID: 114232717385523902}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -236,6 +236,21 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114232717385523902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1826021107771416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d3599b25b1560c47beb978431571a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passed: {r: 0, g: 0, b: 0, a: 0.5}
+  toDo: {r: 0, g: 1, b: 0, a: 1}
+  failed: {r: 1, g: 0.1, b: 0.1, a: 0.9}
+  _player: {fileID: 0}
 --- !u!114 &114271021432848262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -270,21 +285,6 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Attack:\nR . R L | . L . L\nStay:\nR . . . | L . . R\nMove Forward: \nR
     . . . | . . R L\nMove Backward:\n. . R . | L . . . "
---- !u!114 &114518911329420766
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1731941181242646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d3599b25b1560c47beb978431571a66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  passed: {r: 0, g: 0, b: 0, a: 0.5}
-  toDo: {r: 0, g: 1, b: 0, a: 1}
-  failed: {r: 1, g: 0.1, b: 0.1, a: 0.9}
-  _player: {fileID: 0}
 --- !u!114 &114593710882390270
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -312,21 +312,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114649567366222078
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1826021107771416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d3599b25b1560c47beb978431571a66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  passed: {r: 0, g: 0, b: 0, a: 0.5}
-  toDo: {r: 0, g: 1, b: 0, a: 1}
-  failed: {r: 1, g: 0.1, b: 0.1, a: 0.9}
-  _player: {fileID: 0}
 --- !u!114 &114732899120568468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -361,6 +346,21 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Attack:\nR . R L | . L . L\nStay:\nR . . . | L . . R\nMove Forward: \nR
     . . . | . . R L\nMove Backward:\n. . R . | L . . . "
+--- !u!114 &114860413534134648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1731941181242646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d3599b25b1560c47beb978431571a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passed: {r: 0, g: 0, b: 0, a: 0.5}
+  toDo: {r: 0, g: 1, b: 0, a: 1}
+  failed: {r: 1, g: 0.1, b: 0.1, a: 0.9}
+  _player: {fileID: 0}
 --- !u!114 &114998745214561794
 MonoBehaviour:
   m_ObjectHideFlags: 1

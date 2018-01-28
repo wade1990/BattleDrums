@@ -136,3 +136,4 @@ MonoBehaviour:
   GameMusic: {fileID: 8300000, guid: b6d594a7632e08548988745890d5f9b3, type: 3}
   EndMusic: {fileID: 8300000, guid: 061d730324b11d54183edc3dfad83822, type: 3}
   EndPanel: {fileID: 0}
+  Metronome: {fileID: 0}

@@ -10,10 +10,11 @@ public class GameController : MonoBehaviour
     public AudioClip EndMusic;
 
     public GameObject EndPanel;
+    public GameObject Metronome;
 
     private AudioSource _audioSource;
-    private GameState _gameState;
 
+    public GameState gameState;
     public enum GameState
     {
         StartCountDownState,
@@ -30,7 +31,8 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
-        _gameState = GameState.StartCountDownState;
+        gameState = GameState.StartCountDownState;
+        Time.timeScale = 1.0f;
     }
 
     private void Update()
@@ -38,7 +40,7 @@ public class GameController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
             SceneManager.LoadScene("Menu");
 
-        switch (_gameState)
+        switch (gameState)
         {
             case GameState.StartCountDownState:
                 StartCoroutine(StartCountDown());
@@ -46,10 +48,9 @@ public class GameController : MonoBehaviour
             case GameState.CountDownState:
                 break;
             case GameState.StartState:
-                Time.timeScale = 1.0f;
                 _audioSource.clip = GameMusic;
                 _audioSource.Play();
-                _gameState = GameState.PlayState;
+                gameState = GameState.PlayState;
                 break;
             case GameState.PlayState:
                 if (!_audioSource.isPlaying)
@@ -62,14 +63,15 @@ public class GameController : MonoBehaviour
 
     IEnumerator StartCountDown()
     {
-        _gameState = GameState.CountDownState;
+        gameState = GameState.CountDownState;
         yield return new WaitForSeconds(countDownTime);
-        _gameState = GameState.StartState;
+        Destroy(Metronome.gameObject);
+        gameState = GameState.StartState;
     }
 
     private void TimeUp()
     {
-        _gameState = GameState.EndState;
+        gameState = GameState.EndState;
         Time.timeScale = 0f;
         EndPanel.SetActive(true);
     }
@@ -79,7 +81,7 @@ public class GameController : MonoBehaviour
     /// </summary>
     private void EndGame()
     {
-        _gameState = GameState.EndState;
+        gameState = GameState.EndState;
         Time.timeScale = 0f;
         EndPanel.SetActive(true);
         _audioSource.clip = EndMusic;
