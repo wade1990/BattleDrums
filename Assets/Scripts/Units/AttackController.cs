@@ -11,7 +11,7 @@ public class AttackController : MonoBehaviour
 
     public event Action<Unit> TriggerEntered;
 
-    private List<Collider2D> _removeQueue;
+    private readonly List<Collider2D> _removeQueue = new List<Collider2D>();
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -56,5 +56,7 @@ public class AttackController : MonoBehaviour
     {
         foreach (Collider2D collision in _removeQueue)
             _enemiesInRange.Remove(collision);
+
+        _removeQueue.Clear();
     }
 }
