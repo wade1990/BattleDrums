@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 114808451904352088}
   - component: {fileID: 114438785055859188}
   - component: {fileID: 114380692282050224}
+  - component: {fileID: 114937512436541700}
   m_Layer: 8
   m_Name: Spearmen1
   m_TagString: Untagged
@@ -78,6 +79,7 @@ GameObject:
   - component: {fileID: 114505736968348688}
   - component: {fileID: 114841014194177276}
   - component: {fileID: 114935650631225064}
+  - component: {fileID: 114768707823611850}
   m_Layer: 8
   m_Name: Spearmen1
   m_TagString: Untagged
@@ -222,6 +224,7 @@ GameObject:
   - component: {fileID: 114153681045574812}
   - component: {fileID: 114162549010655198}
   - component: {fileID: 114421367216331042}
+  - component: {fileID: 114056029993713048}
   m_Layer: 8
   m_Name: Spearmen1
   m_TagString: Untagged
@@ -1422,6 +1425,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114056029993713048
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683810857068900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114070970225641824
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1871,6 +1885,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 100
   _attackedStopsMoving: 1
+--- !u!114 &114768707823611850
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1184202364920482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114795877927483512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2016,6 +2041,17 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1184202364920482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114937512436541700
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1125981300650928}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
