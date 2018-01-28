@@ -1960,11 +1960,11 @@ MonoBehaviour:
     Filter: 2147483647
     Pattern: 0000000000000000ffffff7fffffff7f
   ControlScheme:
-  - key: 122
+  - key: 99
     beat: 4
   - key: 120
     beat: 2
-  - key: 99
+  - key: 122
     beat: 1
 --- !u!114 &114777190888518252
 MonoBehaviour:
