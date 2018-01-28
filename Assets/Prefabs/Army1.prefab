@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 114124355445434712}
   - component: {fileID: 114777190888518252}
   - component: {fileID: 114946523548126026}
+  - component: {fileID: 114026615603518824}
   m_Layer: 8
   m_Name: Spearmen1
   m_TagString: Untagged
@@ -165,6 +166,7 @@ GameObject:
   - component: {fileID: 114423532204029290}
   - component: {fileID: 114545151716831122}
   - component: {fileID: 114247237409625268}
+  - component: {fileID: 114448122355556436}
   m_Layer: 8
   m_Name: Spearmen1
   m_TagString: Untagged
@@ -241,6 +243,7 @@ GameObject:
   - component: {fileID: 114509292052842470}
   - component: {fileID: 114960108993392944}
   - component: {fileID: 114114776061980162}
+  - component: {fileID: 114539503366702762}
   m_Layer: 8
   m_Name: Spearmen1
   m_TagString: Untagged
@@ -1451,8 +1454,21 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   ForwardDirection: {x: 1, y: 0}
-  Speed: 0.005
+  Speed: 0.012
+  MovementDuration: 1
   _beatsPerDamage: 0
+  _volleyDuration: 1
+--- !u!114 &114026615603518824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1216300331284288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114049299418477008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1704,6 +1720,7 @@ MonoBehaviour:
       PublicKeyToken=null
   ForwardDirection: {x: 1, y: 0}
   Speed: 0.01
+  MovementDuration: 1
   _defense: 100
   _holdingDamage: 100
   _movementDelay: 0
@@ -1723,6 +1740,17 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+--- !u!114 &114448122355556436
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1247230339556502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114486872376713136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1752,6 +1780,17 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1267678297523208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114539503366702762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1335051978992398}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d7926fa5412c6a4ea0fb8b761fce6dc, type: 3}
@@ -1825,6 +1864,7 @@ MonoBehaviour:
       PublicKeyToken=null
   ForwardDirection: {x: 1, y: 0}
   Speed: 0.02
+  MovementDuration: 1
 --- !u!114 &114649612750205472
 MonoBehaviour:
   m_ObjectHideFlags: 1
