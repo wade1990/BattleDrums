@@ -19,12 +19,6 @@ public class Player : MonoBehaviour
         _rhythmInput.ValidInputMade += PerformAction;
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            SceneManager.LoadScene("Menu");
-    }
-
     private void PerformAction(UnitType unitType, ActionType actionType)
     {
         List<Unit> units = GetUnits(unitType);
