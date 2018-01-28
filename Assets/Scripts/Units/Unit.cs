@@ -12,7 +12,7 @@ public class Unit : MonoBehaviour
 
     public event Action<Unit> Dying;
 
-    private Animator[] _animators;
+    protected Animator[] _animators;
     private HealthController _healthController;
     protected AttackController AttackController;
 
