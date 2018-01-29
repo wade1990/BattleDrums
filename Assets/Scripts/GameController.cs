@@ -53,7 +53,7 @@ public class GameController : MonoBehaviour
         {
             case GameState.StartCountDownState:
                 gameState = GameState.CountDownState;
-                BeatManager.Instance.Beat.AddListener(count);
+                BeatManager.Instance.Beat.AddListener(CountDown);
                 break;
             case GameState.CountDownState:
                 if (_count >= CountDownBeats)
@@ -74,11 +74,14 @@ public class GameController : MonoBehaviour
         }
     }
 
-    private void count()
+    private void CountDown()
     {
         _count++;
     }
 
+    /// <summary>
+    /// Play this when the time is up.
+    /// </summary>
     private void TimeUp()
     {
         gameState = GameState.EndState;
@@ -96,6 +99,7 @@ public class GameController : MonoBehaviour
         EndText.fontSize = 100;
         EndText.text = player.name + " lost!";
         EndText.transform.parent.gameObject.SetActive(true);
+        _audioSource.loop = false;
         _audioSource.clip = EndMusic;
         _audioSource.Play();
     }
