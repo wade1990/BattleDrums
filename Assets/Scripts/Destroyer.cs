@@ -15,6 +15,6 @@ public class Destroyer : MonoBehaviour
 
     public void DestroySelf()
     {
-        Destroy(gameObject);
+        Destroy(gameObject.transform.parent.gameObject);
     }
 }
