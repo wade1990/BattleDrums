@@ -30,6 +30,8 @@ public class Unit : MonoBehaviour
 
         _healthController.Died += x =>
         {
+            AttackController.enabled = false;
+
             if (Dying != null)
                 Dying.Invoke(this);
 
